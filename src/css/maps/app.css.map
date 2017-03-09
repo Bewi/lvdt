@@ -1,0 +1,1 @@
+{"version":3,"file":"../app.css","sources":["app.scss","_body.scss"],"sourcesContent":["@import 'body';","body {\r\n    background-color: white;\r\n}"],"names":[],"mappings":"ACAA,AAAA,IAAI,AAAC,CACD,gBAAgB,CAAE,KAAK,CAC1B"}
