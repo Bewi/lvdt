@@ -2,7 +2,9 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var babel = require('gulp-babel');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sassify', function() {
@@ -14,12 +16,12 @@ gulp.task('sassify', function() {
 });
 
 gulp.task('babelify', function() {
-    return gulp.src('./src/app/app.js')
-        .pipe(sourcemaps.init())
-        .pipe(babel({presets: ['latest']}))
-        .pipe(sourcemaps.write('./'))
+    return browserify(['./src/app/app.jsx'])
+        .transform(babelify)
+        .bundle()
+        .pipe(source('app.js'))
         .pipe(gulp.dest('./src/applied'));
-})
+});
 
 gulp.task('sass:watch', function () {
   gulp.watch('./src/sass/**/*.scss', ['sassify']);
