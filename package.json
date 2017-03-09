@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Bewi/lvdt/issues"
   },
-  "homepage": "https://github.com/Bewi/lvdt#readme"
+  "homepage": "https://github.com/Bewi/lvdt#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1"
+  }
 }
