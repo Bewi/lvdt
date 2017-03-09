@@ -24,5 +24,12 @@ gulp.task('babelify', function() {
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./src/sass/**/*.scss', ['sassify']);
+    gulp.watch('./src/sass/**/*.scss', ['sassify']);
 });
+
+gulp.task('babel:watch', function() {
+    gulp.watch(['./src/**/*.jsx', './src/**/*.js', '!./src/applied/**/*.*'], ['babelify']);
+});
+
+gulp.task('watch', ['sass:watch', 'babel:watch']);
+
