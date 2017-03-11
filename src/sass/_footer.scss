@@ -1,0 +1,26 @@
+body {
+    footer {
+        background-color: black;
+        margin-top: 88px;
+        height: 300px;
+
+        h3 {
+            text-transform: uppercase;
+            color: white;
+            font-size: 11px;
+            margin-top: 40px;
+        }
+
+        a, span {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
