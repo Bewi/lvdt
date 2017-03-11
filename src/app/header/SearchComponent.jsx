@@ -5,7 +5,7 @@ class SearchComponent extends Component {
     render() {
         return (
             <div id="search" className="container">
-                <div class="row">
+                <div className="row">
                     <input type="text" placeholder="Rechercher un arôme, ingrédient ..." />
                     <img src="./images/search.svg" alt="" />
                 </div>

@@ -1,3 +1,19 @@
 body {
     background-color: white;
+    
+    #mask {
+        position: fixed;
+        background-color: white;
+        opacity: 0;
+        display: none;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        transition-property: opacity 0.4s;
+        &.show {
+            display: block;
+            opacity: 0.5;
+        }
+    }
 }
