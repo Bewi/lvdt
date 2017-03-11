@@ -1,24 +1,10 @@
 import React from 'react';
 import Header from './header/HeaderComponent.jsx';
-
-import {observable, action} from 'mobx';
-
-var appState = observable({
-    timer: 0
-});
-
-appState.resetTimer = action(function reset() {
-    appState.timer = 0;
-});
-
-setInterval(action(function tick() {
-    appState.timer += 1;
-}), 1000);
-
+import loginState from './header/loginState.js';
 
 const element = (
     <div >
-        <Header appState={appState} />
+        <Header loginState={loginState} />
     </div>
 )
 

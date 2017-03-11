@@ -1,0 +1,64 @@
+body {
+    #login {
+        position: absolute;
+        z-index: 2;
+        top: -347px;
+        left: 0;
+        height: 347px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        transition: top 0.4s 0.135s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &.show {
+            top: 0;
+        }
+
+        img {
+            width: 180px;
+        }
+
+        div.row:first-child {
+            margin-bottom: 40px;    
+            > div {
+                height: 70px;
+                line-height: 70px;
+            }
+        }
+
+        #account {
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        form {
+            .input-group {
+                label {
+                    display: block;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    margin-bottom: 20px;
+                    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                }
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    box-sizing: border-box;
+                    color: black;
+                    border: none;
+                    &[type="submit"] {
+                        margin-top: 35px;
+                        background-color: white;
+                        border: none;
+                        text-transform: uppercase;
+                    }
+                    &.invalid {
+                        background-color: #fac0c1;
+                    }
+                }
+            }
+        }
+    }
+}

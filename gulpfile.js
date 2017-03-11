@@ -31,5 +31,5 @@ gulp.task('babel:watch', function() {
     gulp.watch(['./src/**/*.jsx', './src/**/*.js', '!./src/applied/**/*.*'], ['babelify']);
 });
 
-gulp.task('watch', ['sass:watch', 'babel:watch']);
+gulp.task('watch', ['sassify', 'babelify', 'sass:watch', 'babel:watch']);
 
