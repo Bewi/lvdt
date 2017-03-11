@@ -1,0 +1,27 @@
+header {
+    border-bottom: 1px solid #e5e5e5;
+
+    #hero {
+        height: 242px;
+        background-image: url('../images/hero.png');
+        background-position-x: 50%;
+        background-position-y: 0;
+        background-repeat: no-repeat;
+        background-size: 340px;
+
+        img {
+            width: 180px;
+        }
+
+        div.row > div {
+            height: 70px;
+            line-height: 70px;
+        }
+
+        div#account {
+            text-transform: uppercase;
+            font-size: 10px;    
+            color: #181919
+        }
+    }
+}
