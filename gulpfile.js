@@ -29,11 +29,11 @@ gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sassify']);
 });
 
-gulp.task('babel:watch', function() {
-    gulp.watch(['./src/**/*.jsx', './src/**/*.js', '!./src/applied/**/*.*'], ['babelify']);
-});
+// gulp.task('babel:watch', function() {
+//     gulp.watch(['./src/**/*.jsx', './src/**/*.js', '!./src/applied/**/*.*'], ['babelify']);
+// });
 
-gulp.task('watch', ['sassify', 'babelify', 'sass:watch', 'babel:watch']);
+gulp.task('watch', ['sassify', 'sass:watch']);
 
 
 
@@ -44,7 +44,7 @@ gulp.task('phpify', function() {
       bin: 'C:/php/php.exe',
       ini: 'C:/php/php.ini',
       port: 8000,
-      base: ''
+      base: 'src'
    });
 });
 
