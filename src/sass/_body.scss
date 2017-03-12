@@ -1,6 +1,12 @@
 body {
     background-color: white;
     
+    h3 {
+        text-transform: uppercase;
+        font-family: 'BrandonGrotesque Bold';
+        font-size: 11px;
+    }
+
     #mask {
         position: fixed;
         background-color: white;
