@@ -24,6 +24,12 @@ header {
             color: #181919;
             cursor: pointer;
             font-family: 'BrondonGrotesque Bold';
+            text-align: right;
+        }
+
+        @media only screen and (max-width : 768px) {
+            background-image: none;
+            height: 75px;
         }
     }
 }
