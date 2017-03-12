@@ -13,6 +13,10 @@ body {
                 border: none;
                 outline: none;
             }
+            
+            &[placeholder] { 
+                text-overflow: ellipsis;
+            }
         }
 
         img {

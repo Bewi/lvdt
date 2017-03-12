@@ -21,6 +21,7 @@
 
     <?php include('app/home/home.php'); ?>
     <?php include('app/footer/footer.php'); ?>
+    <script type="text/javascript" src="./scripts/header.js"></script>
 </body>
 
 </html>
