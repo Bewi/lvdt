@@ -25,7 +25,6 @@
 
     <?php include('app/footer/footer.php'); ?>
 
-    <script type="text/javascript" src="./scripts/clamp.min.js"></script>
     <script type="text/javascript" src="./scripts/app.js"></script>
 </body>
 
