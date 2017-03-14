@@ -1,8 +1,6 @@
 (function() {
     'use strict';
 
-    console.log(document.getElementById('account'));
-
     var accountEl = document.getElementById('account');
     var closeLoginEl = document.getElementById('closeLogin');
     var maskEl = document.getElementById('mask');
@@ -18,5 +16,4 @@
         maskEl.className = maskEl.className.replace(' show', '');
         loginEl.className = maskEl.className.replace(' show', '');
     }
-
 })();

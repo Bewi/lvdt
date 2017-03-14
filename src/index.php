@@ -16,12 +16,16 @@
 </head>
 
 <body>
-    <?php include('./app/header/header.php') ?>    
-    <!--<div id="app"></div>-->
+    <?php include('./app/header/header.php') ?> 
 
-    <?php include('app/home/home.php'); ?>
+    <?php include('./app/home/nav.php') ?>   
+
+    <?php include('app/searchResult/searchResult.php'); ?>
+    <?php include('app/home/big-picture.php'); ?>
+
     <?php include('app/footer/footer.php'); ?>
-    <script type="text/javascript" src="./scripts/header.js"></script>
+
+    <script type="text/javascript" src="./scripts/app.js"></script>
 </body>
 
 </html>

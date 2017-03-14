@@ -1,5 +1,6 @@
 header {
     border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 52px;
 
     #hero {
         height: 242px;
@@ -23,13 +24,22 @@ header {
             font-size: 10px;    
             color: #181919;
             cursor: pointer;
-            font-family: 'BrondonGrotesque Bold';
+            font-family: 'BrandonGrotesque Bold';
             text-align: right;
         }
 
         @media only screen and (max-width : 768px) {
             background-image: none;
-            height: 75px;
+            height: 60px;
+        }
+    }
+
+    &.light {
+        margin-bottom: 20px;
+
+        #hero {
+            background-image: none;
+            height: 60px;
         }
     }
 }
