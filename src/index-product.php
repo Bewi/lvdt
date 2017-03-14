@@ -16,14 +16,15 @@
 </head>
 
 <body>
-    <?php $isLightHeader = false ?>
-
+    <?php $isLightHeader = true ?>
 
     <?php include('./app/header/header.php') ?> 
 
     <?php include('./app/home/nav.php') ?>   
 
-    <?php include('app/home/big-picture.php'); ?>
+    <?php include('./app/product/product.php') ?>
+
+    <?php include('./app/product/discover.php') ?>
 
     <?php include('app/footer/footer.php'); ?>
 

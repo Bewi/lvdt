@@ -1,0 +1,30 @@
+#product {
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+    padding: 85px;
+
+    .product-details {
+        img {
+            width: 100%;
+        }
+
+        .price {
+            font-family: 'BrandonGrotesque Bold';
+            font-size: 15px;
+            margin-bottom: 13px;
+        }
+        
+        .description {
+            color: $light-grey;
+            font-family: BrandonGrotesque Regular;
+            font-size: 18px;
+        }
+
+        .property {
+            span {
+                font-size: 18px;
+                font-family: 'BrandonGrotesque Regular';
+            }
+        }
+    }
+}

@@ -13,7 +13,7 @@ body {
                 margin-right: 14px;
 
                 a {
-                    color: #181919;
+                    color: $grey;
                     font-family: 'BrandonGrotesque Regular';
                     &:hover, &.active {
                         text-decoration: underline;
@@ -78,7 +78,7 @@ body {
                     max-height: 60px;
                     font-family: 'BrandonGrotesque Regular';
                     font-size: 14px;
-                    color: #6a6a6a;
+                    color: $light-grey;
 
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -92,13 +92,13 @@ body {
                     text-align: center;
                     text-transform: uppercase;
                     font-family: 'BrandonGrotesque Bold';
-                    color: #181919;
+                    color: $grey;
 
                     padding: 15px 0;
 
                     &:hover {
                         text-decoration: none;
-                        color: #181919;
+                        color: $grey;
                     }
 
                     img {

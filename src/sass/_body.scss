@@ -1,10 +1,30 @@
 body {
     background-color: white;
     
+    h2 {
+        text-transform: uppercase;
+        font-family: BrandonGrotesque Bold;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
     h3 {
         text-transform: uppercase;
         font-family: BrandonGrotesque Bold;
         font-size: 11px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-family: BrandonGrotesque Bold;
+        font-size: 10px;
+        margin-bottom: 5px;
+        color: $light-grey;
+    }
+
+    .half {
+        width: 50%;
+        float: left;
     }
 
     #mask {
