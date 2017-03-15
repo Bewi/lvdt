@@ -16,7 +16,10 @@
 </head>
 
 <body>
-    <?php $isLightHeader = true ?>
+    <?php 
+        $isLightHeader = true; 
+        $isAccountPage = false;
+    ?>
 
     <?php include('./app/header/header.php') ?> 
 

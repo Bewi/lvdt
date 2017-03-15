@@ -1,0 +1,76 @@
+body {
+    #perso {
+        h1 {
+            font-size: 36px;
+            font-family: FreightBigLight;
+            color: #171819;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        p {
+            font-family: BrandonGrotesque Regular;
+            color: #4b4b4b;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-bottom: 55px;
+            .strong {
+                color: #303131;
+                font-size: 18px;
+                text-transform: none;
+            }
+        }
+    }
+
+    #history {       
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+    padding-top: 20px;
+
+        .item {
+            h3 {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+
+            span, a {
+                font-family: BrandonGrotesque Regular;
+                font-size: 15px;
+                color: #303131
+            }
+
+            a {
+                position: relative;
+                overflow: hidden;
+                display: block;
+
+                transition: padding-right 0.3s linear;
+                transition-delay: 0.1s;
+
+                &:after {
+                    content: url("../images/link.svg");
+                    position: absolute;
+                    top: 20px;
+                    right: 10px;
+
+                    transition: top 0.3s linear, right 0.3s linear;
+                }
+
+
+                &:hover {
+                    padding-right: 12px;
+                    transition-delay: 0s;                  
+                    &:after {
+                        top: 2px;
+                        right: 0px;  
+                        transition-delay: 0.1s;
+                    }
+                }
+            }
+
+            .tail {
+                text-align: right;
+            }
+        }
+    }
+}

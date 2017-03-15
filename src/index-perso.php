@@ -17,20 +17,15 @@
 
 <body>
     <?php 
-        $isLightHeader = true;
-        $isAccountPage = false;
+        $isLightHeader = true; 
+        $isAccountPage = true;
     ?>
-            
-    
 
+    <?php include('app/header/header.php') ?> 
 
-    <?php include('./app/header/header.php') ?> 
+    <?php include('app/account/account.php') ?>
 
-    <?php include('./app/home/nav.php') ?>   
-
-    <?php include('app/searchResult/searchResult.php'); ?>
-
-    <?php include('app/footer/footer.php'); ?>
+    <?php include('app/footer/footer.php') ?>
 
     <script type="text/javascript" src="./scripts/app.js"></script>
 </body>
