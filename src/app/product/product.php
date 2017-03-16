@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row product-details">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <img src="./images/items/the-2.png" alt="">
+                <img src="./images/items/ACC_0602.png" alt="">
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <h2>Saint petersbourg</h2>

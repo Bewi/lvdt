@@ -25,7 +25,6 @@
             </div>
         </div>
     </div>
-    <?php //include('app/legal/legal.php'); ?>
     <?php // include('app/legal/term-of-sales.php'); ?>
     <?php include('app/legal/term-of-use.php'); ?>
 
