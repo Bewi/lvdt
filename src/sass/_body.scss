@@ -43,7 +43,7 @@ body {
         width: 100%;
         top: 0px;
         left: 0px;
-        transition-property: opacity 0.4s;
+        transition: opacity 1s linear;
         &.show {
             display: block;
             opacity: 0.5;
