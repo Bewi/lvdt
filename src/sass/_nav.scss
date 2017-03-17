@@ -3,21 +3,65 @@ body {
         font-size: 11px;
         margin-bottom: 20px;
 
-        ul {
-            text-transform: uppercase;
-            font-family: 'BrandonGrotesque Regular';
-            list-style: none;
-            padding-left: 0px;
-            margin-bottom: 0;
-            margin-top: 0;
-            color: #4b4b4b;
-            float: left;
+        #toggler {
+            display: none;
+            cursor: pointer;
+
+            h3 {
+                border-bottom: 1px solid #e5e5e5;
+                padding-bottom: 20px;
+                img {
+                    float: right;
+                    width: 20px;
+                }
+            }
+
+            &.toggled {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        #nav-items {
+            > div {
+                overflow: auto;
+            }
+
+            ul {
+                text-transform: uppercase;
+                font-family: 'BrandonGrotesque Regular';
+                list-style: none;
+                padding-left: 0px;
+                margin-bottom: 0;
+                margin-top: 0;
+                color: #4b4b4b;
+                float: left;
+            }
         }
 
         @media only screen and (max-width: 768px) {
-            ul.half {
-                width: 100%;
+            #toggler {
+                display: block;
             }
+
+            #nav-items {
+                height: 0px;
+                overflow: hidden;
+                transition: height 0.3s linear;
+
+                &.show {
+                    height: 336px;
+                }
+
+                ul.half {
+                    height: 75px;
+                }
+            }
+
+
         }
+
+       
     }
 }

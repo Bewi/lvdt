@@ -31,6 +31,8 @@ body {
             text-transform: uppercase;
             cursor: pointer;
             text-align: right;
+            font-family: BrandonGrotesque Bold;
+            font-size: 10px;
         }
 
         form {
@@ -49,6 +51,7 @@ body {
                     box-sizing: border-box;
                     color: black;
                     border: none;
+                    padding: 0 10px;
                     &[type="submit"] {
                         margin-top: 35px;
                         background-color: white;

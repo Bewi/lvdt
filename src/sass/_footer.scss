@@ -15,11 +15,27 @@ body {
             text-decoration: none;
             display: block;
             font-family: "BrandonGrotesque Regular";
+
+            .mail-short {
+                display: none;
+            }
         }
 
         a:hover {
             color: white;
             text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 768px) {
+            a {
+                .mail-short {
+                    display: inline;
+                }
+
+                .mail-long {
+                    display: none;
+                }
+            }
         }
     }
 }

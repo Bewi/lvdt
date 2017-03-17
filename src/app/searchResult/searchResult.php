@@ -6,8 +6,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -22,8 +22,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -38,8 +38,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -54,8 +54,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -70,8 +70,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -86,8 +86,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -102,8 +102,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -118,8 +118,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -134,8 +134,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">
@@ -150,8 +150,8 @@
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
-                        <span class="col-lg-5">3,70€ /50gr</span>
-                        <span class="col-lg-5">5,70€ /100gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">3,70€ /50gr</span>
+                        <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5">5,70€ /100gr</span>
                     </div>
                     <div class="row">
                         <span class="description col-lg-10">

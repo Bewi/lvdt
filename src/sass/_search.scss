@@ -22,7 +22,15 @@ body {
         img {
             height: 20px;
             float: right;
-                margin-top: 15px;
+            margin-top: 15px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            padding-bottom: 20px;
+            height: 80px;
+            input {
+                font-size: 25px;
+            }
         }
     }
 }

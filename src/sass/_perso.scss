@@ -39,6 +39,10 @@ body {
                 color: #303131
             }
 
+            > div {
+                margin-bottom: 15px;
+            }
+
             a {
                 position: relative;
                 overflow: hidden;
@@ -70,6 +74,20 @@ body {
 
             .tail {
                 text-align: right;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        #history {
+            .item {
+                > div {
+                    overflow: auto;
+                }
+
+                img {
+                    margin-top: 15px;
+                }
             }
         }
     }

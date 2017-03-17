@@ -1,7 +1,7 @@
 <div id="legal">
     <div class="container">
         <div class="row">
-            <div class="col-xs-5">
+            <div class="col-xs-10 col-md-5">
 
             <h3>Conditions Générales de Vente :</h3>
 

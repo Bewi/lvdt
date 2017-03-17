@@ -1,6 +1,11 @@
 <div id="nav" class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+    <div id="toggler" class="row">
+        <div class="col-xs-10">
+            <h3>Découvrir les thés <img src="./images/arrow.svg" alt=""/></h3>
+        </div>
+    </div>
+    <div id="nav-items" class="row">
+        <div class="col-xs-10 col-sm-5 col-md-4 col-lg-4">
             <h3>Les thés d'origines</h3>
             <ul class="half">
                 <li>breakfast</li>
@@ -15,7 +20,7 @@
                 <li>autres pays</li>
             </ul>
         </div>
-        <div class="col-xs-12 col-sm-5 col-md-4 col-md-4 col-lg-4">
+        <div class="col-xs-10 col-sm-5 col-md-4 col-md-4 col-lg-4">
             <h3>Les thés parfumés</h3>
             <ul class="half">
                 <li>mélanges parfumés</li>

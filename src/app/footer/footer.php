@@ -2,13 +2,15 @@
     <div class="container">
         <div class="col-xs-5 col-sm-5 col-md-3 col-lg-2">
             <h3>Informations</h3>
-            <span>contact@le+ventdesthes.com</span>
             <a href="">Mentions légales</a>
             <a href="">CGV</a>
         </div>
         <div class="col-xs-5 col-sm-5 col-md-3 col-lg-2">
             <h3>contact</h3>
-            <span>contact@leventdesthes.com</span>
+            <a href="mailto:contact@leventdesthes.com">
+                 <span class="mail-short">mail</span>
+                 <span class="mail-long">contact@leventdesthes.com</span>
+            </a>
             <span>03 28 66 58 08</span>
             <a href="">Facebook</a>
         </div>
