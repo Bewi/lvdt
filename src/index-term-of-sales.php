@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-5 col-sm-3 col-md-2 col-lg-2">
-                    <img src="./images/logo.svg" />
+                    <a href="/"><img src="./images/logo.svg" /></a>
                 </div>
             </div>
         </div>

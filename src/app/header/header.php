@@ -5,10 +5,9 @@
             include("./app/header/search.php") ;
         }
     ?>
-    <?php 
-        if(!$isAccountPage) {
-            include("./app/header/login.php"); 
-        }
-    ?>
-    <div id="mask"></div>
+    <?php if(!$isAccountPage) {
+        include("./app/header/login.php"); 
+        ?>
+        <div id="mask"></div>
+    <?php } ?>
 </header>
