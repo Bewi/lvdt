@@ -2,7 +2,7 @@
     <div  class="container">
         <div class="row">
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0602.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0602.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0635.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0635.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0636.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0636.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0647.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0647.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0745.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0745.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0749.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0749.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0818.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0818.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0838.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0838.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -130,7 +130,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0840.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0840.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img class="thumb" src="./images/items/ACC_0861.png" alt="" />
+                <img class="thumb" src="./images/items/ACC_0861.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
                     <div class="prices row">

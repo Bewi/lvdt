@@ -24,7 +24,7 @@
 
     <?php include('app/header/header.php') ?> 
 
-    <?php include('app/account/account.php') ?>
+    <?php include('app/account/perso.php') ?>
 
     <?php include('app/footer/footer.php') ?>
 
