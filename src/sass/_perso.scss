@@ -41,39 +41,42 @@ body {
 
             > div {
                 margin-bottom: 15px;
-            }
-
-            a {
-                position: relative;
-                overflow: hidden;
-                display: block;
-
-                transition: padding-right 0.3s linear;
-                transition-delay: 0.1s;
-
-                &:after {
-                    content: url("../images/link.svg");
-                    position: absolute;
-                    top: 20px;
-                    right: 10px;
-
-                    transition: top 0.3s linear, right 0.3s linear;
-                }
-
+                cursor: pointer;
 
                 &:hover {
-                    padding-right: 12px;
-                    transition-delay: 0s;                  
-                    &:after {
-                        top: 2px;
-                        right: 0px;  
-                        transition-delay: 0.1s;
+                    a {
+                        text-decoration: underline;
+                        padding-right: 12px;
+                        transition-delay: 0s;                  
+                        &:after {
+                            top: 2px;
+                            right: 0px;  
+                            transition-delay: 0.1s;
+                        }
                     }
                 }
-            }
 
-            .tail {
-                text-align: right;
+                a {
+                    position: relative;
+                    overflow: hidden;
+                    display: block;
+
+                    transition: padding-right 0.3s linear;
+                    transition-delay: 0.1s;
+
+                    &:after {
+                        content: url("../images/link.svg");
+                        position: absolute;
+                        top: 20px;
+                        right: 10px;
+
+                        transition: top 0.3s linear, right 0.3s linear;
+                    }
+                }
+
+                .tail {
+                    text-align: right;
+                }
             }
         }
     }
