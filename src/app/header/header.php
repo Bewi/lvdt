@@ -5,7 +5,7 @@
             include("./app/header/search.php") ;
         }
     ?>
-    <?php if(!$isAccountPage) {
+    <?php if(!$isLoggedIn) {
         include("./app/header/login.php"); 
         ?>
         <div id="mask"></div>

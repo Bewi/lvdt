@@ -18,7 +18,8 @@
 <body>
     <?php 
         $isLightHeader = true;
-        $isAccountPage = false;
+        $isAccountPage = false;        
+        $isLoggedIn = false;
     ?>
             
     

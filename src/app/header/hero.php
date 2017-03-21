@@ -5,7 +5,11 @@
                 <a href="/"><img src="./images/logo.svg" /></a>
             </div>
             <div id="account" class="col-xs-offset-2 col-sm-offset-5 col-md-offset-7 col-xs-3 col-sm-2 col-md-1 col-lg-1"> 
-                mon compte
+                <?php if ($isLoggedIn) { ?>
+                    mon compte
+                <?php } else { ?>
+                    connexion
+                <?php } ?>
             </div>
         </div>
     </div>

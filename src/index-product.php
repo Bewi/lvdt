@@ -19,6 +19,7 @@
     <?php 
         $isLightHeader = true; 
         $isAccountPage = false;
+        $isLoggedIn = false;
     ?>
 
     <?php include('./app/header/header.php') ?> 
