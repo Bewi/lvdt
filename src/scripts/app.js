@@ -10,17 +10,12 @@
     var navItemsEl = document.getElementById('nav-items');
 
     if(accountEl) {
-        accountEl.onclick = function(ev) {
-            maskEl.className += ' show';
-            loginEl.className += ' show';
-        };
+        accountEl.onclick = openLogin;
     }
 
     if (closeLoginEl) {
-        closeLoginEl.onclick = function(ev) {
-            maskEl.className = maskEl.className.replace(' show', '');
-            loginEl.className = maskEl.className.replace(' show', '');
-        }
+        maskEl.onclick = closeLogin;
+        closeLoginEl.onclick = closeLogin;
     }
 
     if (navTogglerEl && navItemsEl) {
@@ -33,5 +28,15 @@
                 navItemsEl.className += ' show';
             }
         }
+    }
+
+    function openLogin() {
+        maskEl.className += ' show';
+        loginEl.className += ' show';
+    }
+
+    function closeLogin() {
+        maskEl.className = maskEl.className.replace(' show', '');
+        loginEl.className = maskEl.className.replace(' show', '');
     }
 })();

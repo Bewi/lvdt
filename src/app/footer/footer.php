@@ -16,7 +16,7 @@
         </div>
         <div class="col-lg-offset-2 col-xs-5 col-sm-5 col-md-2">
             <h3>adresse</h3>
-            <a href="https://goo.gl/maps/APLSm8DcFP82" target="_blank">
+            <a href="https://goo.gl/maps/tv2T8q366KB2" target="_blank">
                 02 rue Téhvenet <br />
                 59140 Dunkerque
             </a>

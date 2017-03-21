@@ -42,7 +42,7 @@ body {
                     text-transform: uppercase;
                     font-size: 11px;
                     margin-bottom: 20px;
-                    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-family: BrandonGrotesque Bold;
                 }
 
                 input {
@@ -52,11 +52,13 @@ body {
                     color: black;
                     border: none;
                     padding: 0 10px;
+                    font-family: BrandonGrotesque Bold;
                     &[type="submit"] {
                         margin-top: 35px;
                         background-color: white;
                         border: none;
                         text-transform: uppercase;
+                        font-size: 11px;
                     }
                     &.invalid {
                         background-color: #fac0c1;
