@@ -1,7 +1,7 @@
 <div id="searchResult">
     <div  class="container">
         <div class="row">
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0602.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -17,7 +17,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0635.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -33,7 +33,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0636.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -49,7 +49,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0647.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -65,7 +65,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0745.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -81,7 +81,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0749.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -97,7 +97,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0818.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -113,7 +113,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0838.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -129,7 +129,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0840.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
@@ -145,7 +145,7 @@
                     <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
                 </div>
             </div>
-            <div class="item col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
                 <img class="thumb" src="./images/items/ACC_0861.jpg" alt="" />
                 <div class="item-details">
                     <h3>Camomille</h3>
