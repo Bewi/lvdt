@@ -17,7 +17,7 @@
         <div class="col-lg-offset-2 col-xs-5 col-sm-5 col-md-2">
             <h3>adresse</h3>
             <a href="https://goo.gl/maps/tv2T8q366KB2" target="_blank">
-                12 rue Téhvenet <br />
+                12 rue Thévenet <br />
                 59140 Dunkerque
             </a>
         </div>
