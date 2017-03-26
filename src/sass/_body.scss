@@ -1,54 +1,59 @@
-body {
-    background-color: white;
+html {
+    height: 100%;
+    body {
+        min-height: 100%;
 
-    h1 {
-        text-transform: uppercase;
-        font-family: BrandonGrotesque Black;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    h2 {
-        text-transform: uppercase;
-        font-family: BrandonGrotesque Bold;
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        text-transform: uppercase;
-        font-family: BrandonGrotesque Bold;
-        font-size: 11px;
-    }
-
-    h4 {
-        text-transform: uppercase;
-        font-family: BrandonGrotesque Bold;
-        font-size: 10px;
-        margin-bottom: 5px;
-        color: $light-grey;
-    }
-
-    .half {
-        width: 50%;
-        float: left;
-    }
-
-    #mask {
-        position: fixed;
         background-color: white;
-        opacity: 0;
-        visibility: hidden;
-        height: 100%;
-        width: 100%;
-        top: 0px;
-        left: 0px;
-        transition: visibility 1s 0s, opacity 0.3s linear;
-        cursor: pointer;
-        z-index: 1;
-        &.show {
-            visibility: visible;
-            opacity: 0.5;
+
+        h1 {
+            text-transform: uppercase;
+            font-family: BrandonGrotesque Black;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-family: BrandonGrotesque Bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-family: BrandonGrotesque Bold;
+            font-size: 11px;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-family: BrandonGrotesque Bold;
+            font-size: 10px;
+            margin-bottom: 5px;
+            color: $light-grey;
+        }
+
+        .half {
+            width: 50%;
+            float: left;
+        }
+
+        #mask {
+            position: fixed;
+            background-color: white;
+            opacity: 0;
+            visibility: hidden;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            transition: visibility 1s 0s, opacity 0.3s linear;
+            cursor: pointer;
+            z-index: 1;
+            &.show {
+                visibility: visible;
+                opacity: 0.5;
+            }
         }
     }
 }

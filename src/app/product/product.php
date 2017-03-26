@@ -6,7 +6,8 @@
             </div>
             <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4">
                 <h2>Saint petersbourg</h2>
-                <span class="price">3,5€ /50 grammes — 5,5€ /100 grammes</span>
+                <span class="price half">3,5€ /50 grammes</span>
+                <span class="price half">5,5€ /100 grammes</span>
                 <p class="description">Thé noir de Chine keemun, à la bergamote.  Arôme de bergamote, avec zestes d'orange et pétales de bleuets. Faible en théine.</p>
                 <div class="settings">
                     <div class="half">
