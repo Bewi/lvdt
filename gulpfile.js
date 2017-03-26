@@ -35,11 +35,8 @@ gulp.task('babel:watch', function() {
     gulp.watch(['./src/**/*.vue', './src/**/*.js', '!./src/applied/**/*.*'], ['babelify']);
 });
 
-gulp.task('watch', ['sassify', 'sass:watch']);
+gulp.task('watch', ['sassify', 'sass:watch', 'babelify', 'babel:watch']);
 
-
-
-// EXPERIMENTAL
 gulp.task('phpify', function() {
     connect.server({
       hostname: 'localhost',
