@@ -1,9 +1,5 @@
 {
   "presets": [
-      "latest", 
-      "react"
-    ],
-    "plugins": [
-        "transform-decorators-legacy"
+      "latest"
     ]
 }

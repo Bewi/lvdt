@@ -1,15 +1,3 @@
-class Home extends Vue {
-    constructor() {
-        var properties = {
-            el: '#home',
-            data: {
-
-            }
-        }
-
-        super(properties);
-    }
-};
-
-export default Home;
-
+Vue.component('big-picture', {
+    template: ''
+});
