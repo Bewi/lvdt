@@ -37,7 +37,7 @@
                 <li>infusions</li>
             </ul>
         </div>
-        <div class="col-xs-4 col-sm-10 col-md-2 col-md-2 col-lg-2">
+        <div class="col-xs-10 col-sm-10 col-md-2 col-md-2 col-lg-2">
             <h3>Nos autres articles</h3>
             <ul>
                 <li>cafés</li>
