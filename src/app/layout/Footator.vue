@@ -3,8 +3,8 @@
         <div class="container">
             <div class="col-xs-5 col-sm-5 col-md-3 col-lg-2">
                 <h3>Informations</h3>
-                <a href="">Mentions légales</a> <br/>
-                <a href="">CGV</a>
+                <router-link to="/legal">Mentions légales</router-link><br />
+                <router-link to="/term-of-sales">CGV</router-link>
             </div>
             <div class="col-xs-5 col-sm-5 col-md-3 col-lg-2">
                 <h3>contact</h3>
@@ -30,7 +30,6 @@
         </div>
     </footer>
 </template>
-
 <script>
     export default {
         name: 'footator'
