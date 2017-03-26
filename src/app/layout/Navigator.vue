@@ -1,3 +1,4 @@
+<template>
 <div id="nav" class="container">
     <div id="toggler" class="row">
         <div class="col-xs-10">
@@ -49,3 +50,10 @@
         </div>
     </div>
 </div>
+</template>
+
+<script>
+    export default {
+        name: 'nav'
+    }
+</script>
