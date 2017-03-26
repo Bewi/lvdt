@@ -32,6 +32,10 @@
     "vueify": "^9.4.1"
   },
   "dependencies": {
-    "vue": "^2.2.5"
+    "vue": "^2.2.5",
+    "vue-router": "^2.3.0"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
   }
 }

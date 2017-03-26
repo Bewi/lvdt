@@ -2,22 +2,21 @@
     <div id="app">
         <corporate-header :showSearch="true" :isLoggedIn="false"></corporate-header>
         <navigator></navigator>
-        <home></home>
+        <router-view></router-view>
         <footator></footator>
     </div> 
 </template>
 
 <script>
     import CorporateHeader from './header/CorporateHeader.vue';
-    import Home from './home/Home.vue';
-    import Navigator from './layout/Navigator.vue';
-    import Footator from './layout/Footator.vue';
+    import routes from './routes.js';
 
+    import { Navigator, Footator, NotFound } from './layout';
+    
     export default {
         name: 'app',
         components: {
             CorporateHeader,
-            Home,
             Navigator,
             Footator
         }
