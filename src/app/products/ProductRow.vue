@@ -1,5 +1,5 @@
 <template>
-    <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2">
+    <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2" @click="clicked">
         <img class="thumb" src="./images/items/ACC_0602.jpg" alt="" />
         <div class="item-details">
             <h3>Camomille</h3>
@@ -20,6 +20,6 @@
 <script>
     export default {
         name: 'Product',
-        props: ['product']
+        props: ['product', 'clicked']
     }
 </script>
