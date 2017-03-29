@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <corporate-header :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
+        <corporate-header :showSearch="showSearch" :onSearch="search" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
         <navigator v-if="showNav" :isLight="isLight"></navigator>
         <router-view></router-view>
         <footator></footator>
@@ -15,6 +15,11 @@
     export default {
         name: 'app',
         prop: ['currentRoute'],
+        methods: {
+            search (searchFor) {
+                this.$root._router.push({ name: 'products', query: { search: searchFor }})
+            }
+        },
         computed: {
             isLoggedIn: function() {
                 return false;

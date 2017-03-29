@@ -9,6 +9,16 @@ body {
             padding-top: 0px;
         }
 
+        a {
+            color: $grey;
+            font-family: 'BrandonGrotesque Regular';
+            &:hover, &.active {
+                text-decoration: underline;
+                color: black;
+                font-family: 'BrandonGrotesque Bold'
+            }
+        }
+
         #toggler {
             display: none;
             cursor: pointer;

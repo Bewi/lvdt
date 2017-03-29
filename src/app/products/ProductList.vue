@@ -22,9 +22,20 @@
 
     export default {
         name: 'products',
+        created () {
+            this.fetchData();
+        },
+        watch: {
+            '$route': 'fetchData'
+        },
         methods: {
             goToDetails (p) {
                 this.$root._router.push({ name: 'product', params: {productId: p}});
+            },
+            fetchData () {
+                const searchQuery = this.$route.query.search;
+                console.log(searchQuery);
+                console.log('fetch data');
             }
         },
         data: function() { 
