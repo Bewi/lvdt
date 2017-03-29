@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <corporate-header :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :isSuperLight="isSuperLight" :noBorder="noBorder"></corporate-header>
-        <navigator v-if="showNav"></navigator>
+        <corporate-header :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
+        <navigator v-if="showNav" :isLight="isLight"></navigator>
         <router-view></router-view>
         <footator></footator>
     </div> 
@@ -20,24 +20,25 @@
             isLoggedIn: function() {
                 return false;
             },
+            route: function() {
+                return routes.find(r => r.name === this.$route.name);
+            },
             showSearch: function() {
-                let route = routes.find(r => r.name === this.$route.name) ;
-                return route ? route.searchable : false; 
+                return this.route ? this.route.searchable : false; 
+            },
+            showNav: function() {
+                return this.route ? this.route.hasNav : false; 
             },
             showNav: function() {
                 const routeName = this.$route.name;
                 return routeName === 'Home' || routeName === 'Product' || routeName === 'Products';
             },
             isLight: function() {
-                const routeName = this.$route.name;
-                return routeName === 'Account' || routeName === 'Product' || routeName === 'Products';
+                return this.$route.name !== 'home';
             },
-            noBorder: function() {
-                const routeName = this.$route.name;
-                return routeName === 'Account';
-            },
-            isSuperLight: function() {
-                
+            hideAccountLink: function() {
+                let route = routes.find(r => r.name === this.$route.name) ;
+                return this.route ? this.route.legalPage : false; 
             }
         },
         components: {

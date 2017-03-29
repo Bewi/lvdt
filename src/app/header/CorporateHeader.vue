@@ -1,6 +1,6 @@
 <template>
-    <header :class="{ light: isLight, 'super-light': isSuperLight, 'no-border': noBorder}">
-        <hero :isLoggedIn='isLoggedIn'></hero>
+    <header :class="{light: isLight}">
+        <hero :isLoggedIn='isLoggedIn' :hideAccountLink='hideAccountLink'></hero>
         <search v-if='showSearch'></search>
         <login v-if='!isLoggedIn'></login>
     </header>
@@ -13,7 +13,7 @@
 
     export default {
         name: 'corporate-header',
-        props: ['isLoggedIn', 'showSearch', 'isLight', 'isSuperLight', 'noBorder'],
+        props: ['isLoggedIn', 'showSearch', 'isLight', 'hideAccountLink'],
         components: {
             hero,
             login,

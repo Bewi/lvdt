@@ -11,7 +11,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var connect = require('gulp-connect-php');
 
 gulp.task('sassify', function() {
-    return gulp.src('./src/sass/app.scss', { base: 'app' })
+    return gulp.src('./src/sass/app.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(sourcemaps.write('./maps'))
