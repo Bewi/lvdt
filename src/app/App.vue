@@ -12,7 +12,6 @@
     import routes from './routes.js';
 
     import { Navigator, Footator, NotFound } from './layout';
-    
     export default {
         name: 'app',
         prop: ['currentRoute'],
@@ -28,10 +27,6 @@
             },
             showNav: function() {
                 return this.route ? this.route.hasNav : false; 
-            },
-            showNav: function() {
-                const routeName = this.$route.name;
-                return routeName === 'Home' || routeName === 'Product' || routeName === 'Products';
             },
             isLight: function() {
                 return this.$route.name !== 'home';
