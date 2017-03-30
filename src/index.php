@@ -17,6 +17,5 @@
     <body>
         <div id="app"></div>
         <script type="text/javascript" src="./applied/app.js"></script>
-        <script type="text/javascript" src="./scripts/app.js"></script>
     </body>
 </html>

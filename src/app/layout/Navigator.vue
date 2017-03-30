@@ -1,12 +1,12 @@
 <template>
     <div id="nav" :class="{ light: isLight }">
         <div class="container">
-            <div id="toggler" class="row">
+            <div id="toggler" class="row" @click="toggle" :class="{ toggled: visible }">
                 <div class="col-xs-10">
                     <h3>Découvrir les thés <img src="./images/arrow.svg" alt=""/></h3>
                 </div>
             </div>
-            <div id="nav-items" class="row">
+            <div id="nav-items" class="row" :class="{ show: visible }">
                 <div class="col-xs-10 col-sm-5 col-md-4 col-lg-4">
                     <h3>Les thés d'origines</h3>
                     <ul class="half">
@@ -60,6 +60,14 @@
     export default {
         name: 'nav',
         props: ['isLight'],
+        data () {
+            return { visible: false }
+        },
+        methods: {
+            toggle () {
+                this.visible = !this.visible;
+            }
+        },
         components: {
             NavigatorItem
         }
