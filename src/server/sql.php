@@ -1,62 +1,60 @@
-<?
-function sql_connect()
-{
-	try
+<?php
+
+	class dumb {};
+
+	function sql_connect()
 	{
-		$bdd = new PDO('mysql:host=localhost;port=3306;dbname=ventdesthes;charset=utf8','login','password');
+		try
+		{
+			$bdd = new PDO('mysql:host=5.135.191.223;port=59340;dbname=webtest;charset=utf8','webtest','web@test!1704');
+		}
+		catch (Exception $e)
+		{
+			die('Erreur : ' . $e->getMessage());
+		}	
+		return $bdd;
 	}
-	catch (Exception $e)
-	{
-        die('Erreur : ' . $e->getMessage());
-	}	
-	return $bdd;
-}
  
+	function sql_Product($base,$Id)
+	{
+    	$result = new class extends dumb {};
+		
+		$req=$base->query('CALL WebProduct('.$Id.');');
+		$data=$req->fetch();
+		$result->id = $Id;
+		$result->nom=$data['Nom'];
+		$result->description=$data['Description'];
+		$result->image=$data['WebImage'];
+		$result->dureeInfusion=$data['DureeInfusion'];
+		$result->temperatureInfusion=$data['TemperatureInfusion'];
+		$result->gradeThe=$data['GradeThe'];
+		$result->typeConso=$data['TypeConso'];
+		$result->famille=$data['Famille'];
+		$result->typeDominant=$data['TypeDominant'];
+		$result->paysOrigine=$data['PaysOrigine'];
+		$result->regionOrigine=$data['RegionOrigine'];
+		$req->closeCursor();
 
-function sql_TheDuMois($base,&$Id, &$Nom,&$Description,&$PVente,&$Image)
-{
-	$req=$base->query('CALL WebTheDuMois();');
-	$data=$req->fetch();
-	$Id=$data['NumArticle'];
-	$Nom=$data['Nom'];
-	$Description=$data['Description'];
-	$Image=$data['WebImage'];
-	$req->closeCursor();
-}
+		return $result;
+	}
 
-function sql_AccessoireDuMois($base,&$Id, &$Nom,&$Description,&$PVente,&$Image)
-{
-	$req=$base->query('CALL WebAccessoireDuMois();');
-	$data=$req->fetch();
-	$Id=$data['NumArticle'];
-	$Nom=$data['Nom'];
-	$Description=$data['Description'];
-	$Image=$data['WebImage'];
-	$req->closeCursor();
-}
+	function sql_AssociatedProduts($base,$Id)
+	{
 
-function sql_Product($base,$Id,&$Nom,&$Description,&$PVente,&$Image,&$DureeInfusion,&$TemperatureInfusion,&$GradeThe,&$TypeConso,&$Famille,&$TypeDominant,&$PaysOrigine, &$RegionOrigine)
-{
-	$req=$base->query('CALL WebProduct('.$Id.');');
-	$data=$req->fetch();
-	$Nom=$data['Nom'];
-	$Description=$data['Description'];
-	$Image=$data['WebImage'];
-	$DureeInfusion=$data['DureeInfusion'];
-	$TemperatureInfusion=$data['TemperatureInfusion'];
-	$GradeThe=$data['GradeThe'];
-	$TypeConso=$data['TypeConso'];
-	$Famille=$data['Famille'];
-	$TypeDominant=$data['TypeDominant'];
-	$PaysOrigine=$data['PaysOrigine'];
-	$RegionOrigine=$data['RegionOrigine'];
-	$req->closeCursor();
-}
+		$req=$base->query('CALL WebAssociatedProducts('.$Id.');');
+		$data=$req->fetchAll();
+		
+		$result = array();
+		foreach ($data as $product) {
+			$result[] = array(
+				"id" => intval($product['NumArticle']),
+				"nom" => $product['Nom'],
+				"image" => $product['WebImage']
+			);
+		}
 
-function sql_AssociatedProduts($base,$Id,&$data)
-{
-	$req=$base->query('CALL WebAssociatedProducts('.$Id.');');
-	$data=$req->fetchAll();
-	$req->closeCursor();
-}
+		$req->closeCursor();
+
+		return $result;
+	}
 ?>

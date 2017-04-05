@@ -11,14 +11,14 @@
                 </div>
             </div>
             <div class="row">
-                <form>
+                <form @submit.prevent="login(email, password)">
                     <div class="input-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <label>e-mail</label>
-                        <input type="text" />
+                        <label for="email">e-mail</label>
+                        <input id="email" type="text" :class="{ invalid: !validState.email}" v-model="email" />
                     </div>
                     <div class="input-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <label>password</label>
-                        <input type="password" class="invalid" />
+                        <label for="password">password</label>
+                        <input id="password" type="password" :class="{ invalid: !validState.password}" v-model="password" />
                     </div>
                     <div class="input-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
                         <input type="submit" value="valider"/>
@@ -30,18 +30,51 @@
 </template>
 
 <script>
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
     export default {
         name: 'login',
         data () {
-            return {isVisible: false};
+            return {
+                isVisible: false,
+                validState: {
+                    email: true,
+                    password: true
+                }
+            };
         },
         methods: {
             show () {
                 this.isVisible = true;
             },
-            hide() {
+            hide () {
                 this.isVisible = false;
-            }
-        }
+            },
+            login (email, password) {
+                let validState = {
+                    email: true,
+                    password: true
+                };
+
+                let hasInvalidities = false;
+
+                //TODO: validate email
+                if (!email) {
+                    this.$set(this.validState, 'email', false);
+                    hasInvalidities = true;
+                }
+
+                if (!password) {
+                    this.$set(this.validState, 'password', false);
+                    hasInvalidities = true;
+                }
+
+                if (!hasInvalidities) {
+                    this.onLogin(email, password);
+                }
+                
+            }   
+        },
+        props: ['onLogin']
     }
 </script>

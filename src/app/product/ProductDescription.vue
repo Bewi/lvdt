@@ -3,48 +3,48 @@
         <div class="container">
             <div class="row product-details">
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4">
-                    <img src="./images/items/ACC_0602.jpg" alt="">
+                    <img :src="`./images/items/${product.image}`" alt="">
                 </div>
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4">
-                    <h2>Saint petersbourg</h2>
+                    <h2>{{product.nom}}</h2>
                     <span class="price half">3,5€ /50 grammes</span>
                     <span class="price half">5,5€ /100 grammes</span>
-                    <p class="description">Thé noir de Chine keemun, à la bergamote.  Arôme de bergamote, avec zestes d'orange et pétales de bleuets. Faible en théine.</p>
+                    <p class="description">{{product.description}}</p>
                     <div class="settings">
                         <div class="half">
                             <div class="property">
                                 <h4>Grade</h4>
-                                <span>B.O.P.</span>
+                                <span>{{product.gradeThe | empty}}</span>
                             </div>
                             <div class="property">
                                 <h4>Moment de la journée</h4>
-                                <span>Toute la journée</span>
+                                <span>{{product.typeConso | empty}}</span>
                             </div>
                             <div class="property">
                                 <h4>Famille</h4>
-                                <span>Parfumé</span>
+                                <span>{{product.famille | empty}}</span>
                             </div>
                             <div class="property">
                                 <h4>Pays d'origine</h4>
-                                <span>Chine</span>
+                                <span>{{product.paysOrigine | empty}}</span>
                             </div>
                         </div>
                         <div class="half">
                             <div class="property">
                                 <h4>Temperature</h4>
-                                <span>95°</span>
+                                <span>{{product.temperatureInfusion | empty}}</span>
                             </div>
                             <div class="property">
                                 <h4>Infusion</h4>
-                                <span>5min.</span>
+                                <span>{{product.dureeInfusion | empty}}</span>
                             </div>
                             <div class="property">
                                 <h4>Type dominant</h4>
-                                <span>Thé noir</span>
+                                <span>{{product.typeDominant | empty}}</span>
                             </div>
                             <div class="property">
                                 <h4>Région d'origine</h4>
-                                <span>—</span>
+                                <span>{{product.regionOrigine | empty}}</span>
                             </div>
                         </div>
                     </div>
@@ -55,6 +55,7 @@
 </template>
 <script>
     export default {
-        name: 'ProductDescription'
+        name: 'ProductDescription',
+        props: ['product']
     }
 </script>

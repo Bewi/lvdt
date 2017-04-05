@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <corporate-header :showSearch="showSearch" :onSearch="search" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
+        <corporate-header :onLogin="login" :onSearch="search"
+            :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
         <navigator v-if="showNav" :isLight="isLight"></navigator>
         <router-view></router-view>
         <footator></footator>
@@ -18,6 +19,9 @@
         methods: {
             search (searchFor) {
                 this.$root._router.push({ name: 'products', query: { search: searchFor }})
+            },
+            login (email, password) {
+                console.log(email, password);
             }
         },
         computed: {

@@ -2,7 +2,7 @@
     <header :class="{light: isLight}">
         <hero :isLoggedIn='isLoggedIn' :hideAccountLink='hideAccountLink' :showLogin='showLogin'></hero>
         <search v-if='showSearch' :onSearch="onSearch"></search>
-        <login v-if='!isLoggedIn' ref="login"></login>
+        <login v-if='!isLoggedIn' ref="login" :onLogin="onLogin"></login>
     </header>
 </template>
 
@@ -13,7 +13,7 @@
 
     export default {
         name: 'corporate-header',
-        props: ['isLoggedIn', 'showSearch', 'isLight', 'hideAccountLink', 'onSearch'],
+        props: ['isLoggedIn', 'showSearch', 'isLight', 'hideAccountLink', 'onSearch', 'onLogin'],
         methods: {
             showLogin () {
                 this.$refs.login.show();
