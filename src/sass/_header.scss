@@ -1,6 +1,4 @@
 header {
-    // border-bottom: 1px solid #e5e5e5;
-    // margin-bottom: 52px;
 
     #hero {
         height: 242px;
@@ -9,6 +7,8 @@ header {
         background-position-y: 0;
         background-repeat: no-repeat;
         background-size: 340px;
+
+        transition: background-position 0.3s 0.3s cubic-bezier(.55, 0, .1, 1), height 0.3s 0.3s cubic-bezier(.55, 0, .1, 1);
 
         img {
             width: 180px;
@@ -30,10 +30,8 @@ header {
     }
 
     &.light {
-        margin-bottom: 20px;
-
         #hero {
-            background-image: none;
+            background-position-y: -165px;
             height: 60px;
         }
     }
