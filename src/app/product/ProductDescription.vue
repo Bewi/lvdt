@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row product-details">
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4">
-                    <img :src="`./images/items/${product.image}`" alt="">
+                    <img :src="product.image ? `./images/items/${product.image}` : `./images/no-image.png`" alt="">
                 </div>
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4">
                     <h2>{{product.nom}}</h2>

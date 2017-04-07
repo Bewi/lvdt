@@ -1,7 +1,7 @@
 body {
     
     footer {
-        background-color: black;
+        background-color: #0f0f0f;
         margin-top: 88px;
         height: 300px;
 
@@ -24,14 +24,18 @@ body {
 
         a {
             display: inline-block;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid #0f0f0f;
             margin-bottom: 3px;
             padding-bottom: 2px;
             text-decoration: none !important;
             
-            &:hover, &:active, &:visited {
+            &:hover, &:active {
                 color: white;
                 border-bottom: 2px solid white;
+            }
+
+            &:visited {
+                color: white;
             }
         }
 

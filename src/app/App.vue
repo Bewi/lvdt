@@ -3,7 +3,9 @@
         <corporate-header :onLogin="login" :onSearch="search"
             :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
         <navigator v-if="showNav" :isLight="isLight"></navigator>
-        <router-view></router-view>
+        <transition name="fade">
+            <router-view></router-view>
+        </transition>
         <footator></footator>
     </div> 
 </template>

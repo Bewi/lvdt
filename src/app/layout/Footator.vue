@@ -13,7 +13,7 @@
                     <span class="mail-long">contact@leventdesthes.com</span>
                 </a><br />
                 <a href="tel:+32328665808">03 28 66 58 08</a><br />
-                <a href="">Facebook</a>
+                <a href="https://www.facebook.com/Le-Vent-des-Thés-287164804644004/">Facebook</a>
             </div>
             <div class="col-lg-offset-2 col-xs-5 col-sm-5 col-md-2">
                 <h3>adresse</h3>

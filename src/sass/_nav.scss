@@ -1,9 +1,9 @@
 body {
     #nav {
         font-size: 11px;
-        margin-bottom: 20px;
         padding-top: 52px;
         border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
 
         &.light {
             padding-top: 0px;
@@ -40,6 +40,8 @@ body {
         }
 
         #nav-items {
+            padding-bottom: 20px;
+
             > div {
                 overflow: hidden;
             }
@@ -57,8 +59,14 @@ body {
         }
 
         @media only screen and (max-width: 768px) {
+            border-bottom: none;
+
             #toggler {
                 display: block;
+            }
+
+            h3 {
+                padding-top: 10px;
             }
 
             #nav-items {
@@ -67,7 +75,8 @@ body {
                 transition: height 0.3s linear;
 
                 &.show {
-                    height: 336px;
+                    height: 384px;
+                    border-bottom: 1px solid #e5e5e5;
                 }
 
                 ul.half {
