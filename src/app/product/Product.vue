@@ -46,6 +46,4 @@
             Discover
         }
     } 
-
-    // {{$route.params.productId}}
 </script>

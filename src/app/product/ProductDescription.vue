@@ -32,11 +32,11 @@
                         <div class="half">
                             <div class="property">
                                 <h4>Temperature</h4>
-                                <span>{{product.temperatureInfusion | empty}}</span>
+                                <span>{{product.temperatureInfusion | empty}} {{ product.temperatureInfusion && '°' }}</span>
                             </div>
                             <div class="property">
                                 <h4>Infusion</h4>
-                                <span>{{product.dureeInfusion | empty}}</span>
+                                <span>{{product.dureeInfusion | empty}} {{ product.dureeInfusion && 'min.' }}</span>
                             </div>
                             <div class="property">
                                 <h4>Type dominant</h4>
