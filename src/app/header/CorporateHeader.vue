@@ -13,10 +13,22 @@
 
     export default {
         name: 'corporate-header',
-        props: ['isLoggedIn', 'showSearch', 'isLight', 'hideAccountLink', 'onSearch', 'onLogin'],
+        props: ['isLoggedIn', 'showSearch', 'isLight', 'hideAccountLink', 'onSearch'],
         methods: {
             showLogin () {
                 this.$refs.login.show();
+            },
+            onLogin(email, password) {
+                this.$http.get('/server/login.php', {
+                    headers: {
+                        Authorization: 'Basic ' + window.btoa(unescape(encodeURIComponent(email + ':' + password)))
+                    }
+                }).then(response => {
+                    console.log(response.body);
+                }, err => {
+                    // TODO handle error
+                    console.error(err);
+                });
             }
         },
         components: {
