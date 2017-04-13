@@ -4,7 +4,11 @@
 
     $bdd=sql_connect();
 
-    echo 'TODO';
+    parse_str($_SERVER['QUERY_STRING'], $QueryString);
+    
+    $result = sql_Products($bdd, $QueryString['search'], $QueryString['offset'], $QueryString['size']);
+
+    echo json_encode($result, JSON_UNESCAPED_UNICODE, JSON_PRETTY_PRINT);
 
     unset($bdd);
 ?>

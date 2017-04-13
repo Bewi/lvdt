@@ -40,7 +40,6 @@
 
 	function sql_AssociatedProduts($base,$Id)
 	{
-
 		$req=$base->query('CALL WebAssociatedProducts('.$Id.');');
 		$data=$req->fetchAll();
 		
@@ -49,6 +48,27 @@
 			$result[] = array(
 				"id" => intval($product['NumArticle']),
 				"nom" => $product['Nom'],
+				"image" => $product['WebImage']
+			);
+		}
+
+		$req->closeCursor();
+
+		return $result;
+	}
+
+	function sql_Products($base, $search, $offset, $size) {
+		$req=$base->query('Call WebRechercheArticle("'.$search.'",'.$size.','.$offset.');');
+
+		$data=$req->fetchAll();
+		
+		$result = array();
+		foreach ($data as $product) {
+			$result[] = array(
+				"total" => intVal($product['NbItemTotal']),
+				"id" => intval($product['NumArticle']),
+				"nom" => $product['Nom'],
+				"description" => $product['Description'],
 				"image" => $product['WebImage']
 			);
 		}

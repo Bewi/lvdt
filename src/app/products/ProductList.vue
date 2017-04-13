@@ -2,7 +2,7 @@
     <div id="searchResult">
         <div  class="container">
             <div class="row">
-                <product-row :item="p" v-for="p in products" :clicked="goToDetails.bind(this, p)"></product-row>
+                <product-row :product="p" v-for="p in products" :clicked="goToDetails.bind(this, p)"></product-row>
             </div>
             <div class="row">
                 <ul class="pager">
@@ -33,14 +33,17 @@
                 this.$root._router.push({ name: 'product', params: {productId: p}});
             },
             fetchData () {
-                const searchQuery = this.$route.query.search;
-                console.log(searchQuery);
-                console.log('fetch data');
+                const query = Object.assign({ search: '', offset: 0, size: 10}, this.$route.query);
+                this.$http.get('/server/products.php', {params: query}).then(function(response) {
+                    this.products = response.body;
+                    this.total = Math.ceil(this.products[0].total / query.size);
+                });
             }
         },
         data: function() { 
             return {
-                products: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+                products: [],
+                total: 0
             }; 
         },
         components: {
