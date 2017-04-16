@@ -5,13 +5,7 @@
                 <product-row :product="p" v-for="p in products" :clicked="goToDetails.bind(this, p)"></product-row>
             </div>
             <div class="row">
-                <ul class="pager">
-                    <li><a href="#" class="active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                </ul>
+               <pager :pages="pages" :active-page="$route.query.offset" route-name="products" :query="$route.query"></pager>
             </div>
         </div>
     </div>
@@ -19,6 +13,7 @@
 
 <script>
     import ProductRow from './ProductRow.vue';
+    import Pager from './Pager.vue';
 
     export default {
         name: 'products',
@@ -33,10 +28,13 @@
                 this.$root._router.push({ name: 'product', params: {productId: p}});
             },
             fetchData () {
-                const query = Object.assign({ search: '', offset: 0, size: 10}, this.$route.query);
+                const query = Object.assign({ search: '', offset: 0, size: 15}, this.$route.query);
                 this.$http.get('/server/products.php', {params: query}).then(function(response) {
                     this.products = response.body;
-                    this.total = Math.ceil(this.products[0].total / query.size);
+                    if (this.products.length > 0) {
+                        this.total = Math.ceil(this.products[0].total / query.size);
+                        this.pages = Array.from(Array(this.total),(x,i) => i)
+                    }
                 });
             }
         },
@@ -47,7 +45,8 @@
             }; 
         },
         components: {
-            ProductRow
+            ProductRow,
+            Pager
         }
     }
 </script>
