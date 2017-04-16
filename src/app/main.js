@@ -5,6 +5,7 @@ import VueResource from 'vue-resource';
 import App from './App.vue';
 import routes from './routes.js';
 import emptyFilter from './filters/empty.filter.js';
+import euroFilter from './filters/euro.filter.js';
 
 const router = new VueRouter({
     routes

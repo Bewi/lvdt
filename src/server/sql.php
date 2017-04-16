@@ -69,7 +69,10 @@
 				"id" => intval($product['NumArticle']),
 				"nom" => $product['Nom'],
 				"description" => $product['Description'],
-				"image" => $product['WebImage']
+				"image" => $product['WebImage'],
+				"tarpce" => $product["tarpce"],
+				"tar100" => $product["tar50"],
+				"tar50" => $product["tar100"]
 			);
 		}
 
