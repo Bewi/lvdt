@@ -1,0 +1,50 @@
+$t: 0.8s;
+$d: $t / 5;
+
+$c1: #2e2e2e;
+$c2: #5e5e5e;
+$c3: #8e8e8e;
+
+svg {
+  height: 0px;
+  width: 0px;
+}
+
+@mixin keyframes($name) {
+  @-o-keyframes #{$name} { @content };
+  @-moz-keyframes #{$name} { @content };
+  @-webkit-keyframes #{$name} { @content }; 
+  @keyframes #{$name} { @content };
+}
+
+@include keyframes(loader) {
+    50% {
+        transform: translateY(-16px);
+        background-color: $c3;
+    }
+}
+body {
+  background-color: $c1;
+  margin: 0;
+}
+  
+.loader {
+  filter: url('#goo');
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-10px);
+  > div {
+    float: left;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: $c2;
+    animation: loader $t infinite;
+  }
+}
+@for $i from 1 through 5 {
+  .loader > div:nth-child(#{$i}) {
+    animation-delay: $i * $d
+  }
+}

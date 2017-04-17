@@ -2,7 +2,8 @@
     <div id="discover">
         <div class="container">
             <h1>Découvrez d'autres produits</h1>
-            <div class="row">
+            <loader v-if="pending"></loader>
+            <div class="row" v-if="!pending">
                 <router-link class="item col-xs-12 col-sm-2 col-md-2 col-lg-2"
                     :to="{ name:'product', params: { productId: product.id} }" v-for="product in relatedProducts">
                     
@@ -19,8 +20,13 @@
     </div>
 </template>
 <script>
+    import Loader from '../layout/Loader.vue';
+
     export default {
         name: 'discover',
-        props: ['relatedProducts']
+        props: ['relatedProducts', 'pending'],
+        components: {
+            Loader
+        }
     }
 </script>

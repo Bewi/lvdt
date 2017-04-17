@@ -2,10 +2,11 @@
     <div id="product">
         <div class="container">
             <div class="row product-details">
-                <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4">
+                <loader v-if="pending"></loader>
+                <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4" v-if="!pending">
                     <img :src="product.image ? `./images/items/${product.image}` : `./images/no-image.png`" alt="">
                 </div>
-                <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4">
+                <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4" v-if="!pending">
                     <h2>{{product.nom}}</h2>
                     <span class="price half">3,5€ /50 grammes</span>
                     <span class="price half">5,5€ /100 grammes</span>
@@ -54,8 +55,13 @@
     </div>
 </template>
 <script>
+    import Loader from '../layout/Loader.vue';
+
     export default {
         name: 'ProductDescription',
-        props: ['product']
+        props: ['product', 'pending'],
+        components: {
+            Loader
+        }
     }
 </script>
