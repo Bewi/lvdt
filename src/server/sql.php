@@ -25,6 +25,9 @@
 		$result->nom=$data['Nom'];
 		$result->description=$data['Description'];
 		$result->image=$data['WebImage'];
+		$result->tarpce=$data['tarpce'];
+		$result->tar50=$data['tar50'];
+		$result->tar100=$data['tar100'];
 		$result->dureeInfusion=$data['DureeInfusion'];
 		$result->temperatureInfusion=$data['TemperatureInfusion'];
 		$result->gradeThe=$data['GradeThe'];
@@ -71,8 +74,8 @@
 				"description" => $product['Description'],
 				"image" => $product['WebImage'],
 				"tarpce" => $product["tarpce"],
-				"tar100" => $product["tar50"],
-				"tar50" => $product["tar100"]
+				"tar50" => $product["tar50"],
+				"tar100" => $product["tar100"]
 			);
 		}
 

@@ -8,8 +8,9 @@
                 </div>
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4" v-if="!pending">
                     <h2>{{product.nom}}</h2>
-                    <span class="price half">3,5€ /50 grammes</span>
-                    <span class="price half">5,5€ /100 grammes</span>
+                    <span class="price half" v-if="product.tar50">{{product.tar50 | euro}} /50 grammes</span>
+                    <span class="price half" v-if="product.tar100">{{product.tar100 | euro}} /100 grammes</span>
+                    <span class="price" v-if="product.tarpce">{{product.tarpce | euro}} /unité</span>
                     <p class="description">{{product.description}}</p>
                     <div class="settings">
                         <div class="half">
