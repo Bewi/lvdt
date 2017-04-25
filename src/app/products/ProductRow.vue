@@ -1,6 +1,8 @@
 <template>
     <div class="item col-xs-10 col-sm-5 col-md-2 col-lg-2" @click="clicked">
-        <img class="thumb" :src="product.image ? `./images/items/${product.image}` : `./images/no-image.png`" alt="" />
+        <object class="thumb" :data="`./images/items/${product.image}`" type="image/png">
+            <img class="thumb" src="./images/no-image.png" alt="" />
+        </object>
         <div class="item-details">
             <h3>{{product.nom}}</h3>
             <div class="prices row">

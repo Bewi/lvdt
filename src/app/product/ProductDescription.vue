@@ -4,7 +4,9 @@
             <div class="row product-details">
                 <loader v-if="pending"></loader>
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4" v-if="!pending">
-                    <img :src="product.image ? `./images/items/${product.image}` : `./images/no-image.png`" alt="">
+                    <object :data="`./images/items/${product.image}`" type="image/png">
+                        <img src="./images/no-image.png" alt="">
+                    </object>
                 </div>
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4" v-if="!pending">
                     <h2>{{product.nom}}</h2>
