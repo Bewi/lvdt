@@ -9,9 +9,18 @@ body {
             width: 90%;
             font-size:40px;
             font-family: 'FreightBigLight';
+            transition: color;
             &:focus {
                 border: none;
                 outline: none;
+            }
+
+            @include placeholder {
+                transition: color 0.2s linear;
+            }
+
+            @include placeholder-focus {
+                color: #aeaeae;
             }
             
             &[placeholder] { 
@@ -19,11 +28,21 @@ body {
             }
         }
 
-        img {
+        svg {
             height: 20px;
+            width: 20px;
             float: right;
             margin-top: 15px;
             cursor: pointer;
+            path {
+                fill: $light-grey;
+                transition: fill 0.2s linear;
+            }
+            &.strong, &:hover {
+                path {
+                    fill: black;
+                }
+            }
         }
 
         @media only screen and (max-width: 768px) {

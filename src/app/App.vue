@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <corporate-header :onLogin="login" :onSearch="search"
+        <corporate-header :onSearch="search"
             :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
         <navigator v-if="showNav" :isLight="isLight"></navigator>
         <transition name="fade">
@@ -21,9 +21,6 @@
         methods: {
             search (searchFor) {
                 this.$root._router.push({ name: 'products', query: { search: searchFor }})
-            },
-            login (email, password) {
-                console.log(email, password);
             }
         },
         computed: {
