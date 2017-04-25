@@ -28,7 +28,15 @@
                 return false;
             },
             route: function() {
-                return routes.find(r => r.name === this.$route.name);
+                let route;
+                for (let i = 0; i < routes.length; i ++) {
+                    if (routes[i].name === this.$route.name) {
+                        route = routes[i]; 
+                        break;
+                    }
+                }   
+
+                return route;
             },
             showSearch: function() {
                 return this.route ? this.route.searchable : false; 
@@ -40,7 +48,6 @@
                 return this.$route.name !== 'home';
             },
             hideAccountLink: function() {
-                let route = routes.find(r => r.name === this.$route.name) ;
                 return this.route ? this.route.legalPage : false; 
             }
         },
