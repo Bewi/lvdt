@@ -3,6 +3,12 @@ body {
         width: 100%;
         padding-top: 60px;
 
+        #no-result {
+            font-family: 'FreightBigLight';
+            font-size: 25px;   
+            margin-top: 25px;
+        }
+
         .pager {
             list-style: none;
             text-align: center;
