@@ -21,6 +21,11 @@
 		
 		$req=$base->query('CALL WebProduct('.$Id.');');
 		$data=$req->fetch();
+
+		if (empty($data)) {
+			return NULL;
+		}
+
 		$result->id = $Id;
 		$result->nom=$data['Nom'];
 		$result->description=$data['Description'];

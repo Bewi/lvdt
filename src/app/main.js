@@ -14,6 +14,16 @@ const router = new VueRouter({
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
+Vue.http.interceptors.push(function(request, next) {
+    next(response => {
+        if (response.status === 404) {
+            router.push('/404');
+        } else if (response.status === 500) {
+            router.push('/500');
+        }
+    });
+})
+
 var vm = new Vue({
     router,
     render: (h) => h(App)

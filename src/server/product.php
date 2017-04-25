@@ -15,7 +15,11 @@
 
     $result = sql_Product($bdd,$Id);
 
-    echo json_encode($result, JSON_UNESCAPED_UNICODE, JSON_PRETTY_PRINT);
+    if ($result == NULL) {
+        header('HTTP/1.0 404 Not Found');
+    } else {
+        echo json_encode($result, JSON_UNESCAPED_UNICODE, JSON_PRETTY_PRINT);
+    }
 
     unset($bdd);
 ?>
