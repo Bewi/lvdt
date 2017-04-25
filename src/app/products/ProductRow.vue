@@ -7,6 +7,7 @@
                 <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5" v-if="product.tar50"> {{product.tar50 | euro}} /50gr</span>
                 <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5" v-if="product.tar100"> {{product.tar100 | euro}} /100gr</span>
                 <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5" v-if="product.tarpce"> {{product.tarpce | euro}} /unité</span>
+                <span class="col-xs-5 col-sm-5 col-md-5 col-lg-5" v-if="!product.tar50 && !product.tar100 && !product.tarpce">N/A</span>
             </div>
             <a class="details" href="#">Détails <img src="images/detail.svg" /></a>
         </div>
