@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="mask" :class="{show: isVisible}"></div>
+        <div id="mask" :class="{show: isVisible}" @click="hide"></div>
         <div id="login" :class="{show: isVisible}">
             <div class="container">
                 <div class="row">
