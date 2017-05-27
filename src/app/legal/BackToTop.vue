@@ -5,6 +5,7 @@
         <span>h</span><span>a</span><span>u</span><span>t</span>
         <span>d</span><span>e</span>
         <span>p</span><span>a</span><span>g</span><span>e</span>
+        <img src="./images/arrow.svg" alt=""/>
     </div>
 </template>
 
@@ -26,7 +27,7 @@
             window.onscroll();
         },
         methods: {
-            scrollTop: () => {
+            scrollTop: function () {
                 if (!this.dissolve) {
                     window.scrollTo(0,0);
                 }
