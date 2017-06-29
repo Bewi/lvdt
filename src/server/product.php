@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'sql.php';
     header( 'content-type: application/json; charset=utf-8' );
 

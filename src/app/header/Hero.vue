@@ -18,6 +18,6 @@
 <script>
     export default { 
         name: 'hero',
-        props: ['hideAccountLink', 'showLogin']
+        props: ['hideAccountLink', 'showLogin', 'isLoggedIn']
     }
 </script>

@@ -1,7 +1,8 @@
 <template>
     <div id="app">
-        <corporate-header :onSearch="search"
-            :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"></corporate-header>
+        <corporate-header :onSearch="search" :onLoggedIn="onLoggedIn" :onLoggedOff="onLoggedOff"
+            :showSearch="showSearch" :isLoggedIn="isLoggedIn" :isLight="isLight" :hideAccountLink="hideAccountLink"
+            ></corporate-header>
         <navigator v-if="showNav" :isLight="isLight"></navigator>
         <transition name="fade">
             <router-view></router-view>
@@ -21,12 +22,21 @@
         methods: {
             search (searchFor) {
                 this.$root._router.push({ name: 'products', query: { search: searchFor }})
+            },
+            onLoggedIn() {
+                this.isLoggedIn = isLoggedIn = true;
+                console.log(isLoggedIn);
+            },
+            onLoggedOff() {
+                this.isLoggedIn = isLoggedIn = false;
             }
         },
+        data () {
+            return {
+                isLoggedIn: isLoggedIn,
+            };
+        },
         computed: {
-            isLoggedIn: function() {
-                return false;
-            },
             route: function() {
                 let route;
                 for (let i = 0; i < routes.length; i ++) {

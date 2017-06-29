@@ -13,7 +13,7 @@
 
     export default {
         name: 'corporate-header',
-        props: ['isLoggedIn', 'showSearch', 'isLight', 'hideAccountLink', 'onSearch'],
+        props: ['isLoggedIn', 'showSearch', 'isLight', 'hideAccountLink', 'onSearch', 'onLoggedIn', 'onLoggedOff'],
         methods: {
             showLogin () {
                 this.$refs.login.show();
@@ -24,11 +24,23 @@
                         Authorization: 'Basic ' + window.btoa(unescape(encodeURIComponent(email + ':' + password)))
                     }
                 }).then(response => {
-                    console.log(response.body);
+                    if (response.status === 200) {
+                        this.onLoggedIn();
+                    }
                 }, err => {
                     // TODO handle error
                     console.error(err);
                 });
+            },
+            onLogOff() {
+                this.$http.get('/server/logout.php')
+                    .then(response => {
+                        if (response.status === 200) {
+                            this.props.onLoggedOff();
+                        }
+                    }, err => {
+                        console.error(err);
+                    });
             }
         },
         components: {

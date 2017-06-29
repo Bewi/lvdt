@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -12,6 +13,9 @@
         <link rel="icon" href="./favico.png" />
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link rel="stylesheet" href="./css/app.css" />
+        <script>
+            var isLoggedIn = <?php echo(isset($_SESSION['authenticated']) ? 'true' : 'false')  ?>;
+        </script>
     </head>
 
     <body>

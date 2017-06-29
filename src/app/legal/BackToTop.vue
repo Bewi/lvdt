@@ -5,7 +5,7 @@
         <span>h</span><span>a</span><span>u</span><span>t</span>
         <span>d</span><span>e</span>
         <span>p</span><span>a</span><span>g</span><span>e</span>
-        <img src="./images/arrow.svg" alt=""/>
+        <img src="./images/arrow.svg" alt="" ></img>
     </div>
 </template>
 
