@@ -20,6 +20,13 @@
 };
 
 @font-face {
+    font-family: "BrandonGrotesque Medium";
+    src: url("../fonts/Brandon_med.otf"),
+        url("../fonts/brandon_med.woff") format('woff'),
+        url("../fonts/brandon_med.woff2") format('woff2');
+}
+
+@font-face {
     font-family: "FreightBigLight";
     src: url("../fonts/freightbiglight.ttf") format("truetype"),
         url("../fonts/freightbiglight.woff") format('woff'),

@@ -1,6 +1,10 @@
 body {
     margin-bottom: 190px;
 
+    &.no-footer {
+        margin-bottom: 0px;
+    }
+
     #app {
         padding-bottom: 88px;
         background-color: white;
