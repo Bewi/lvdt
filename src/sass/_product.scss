@@ -9,15 +9,19 @@
         }
 
         .price {
-            font-family: 'BrandonGrotesque Bold';
-            font-size: 15px;
+            font-family: 'BrandonGrotesque Light';
+            font-size: 13px;
             margin-bottom: 13px;
+
+            .small {
+                font-size: 11px;
+            }
         }
         
         .description {
             color: $light-grey;
-            font-family: BrandonGrotesque Regular;
-            font-size: 18px;
+            font-family: BrandonGrotesque Light;
+            font-size: 19px;
         }
 
         .property {

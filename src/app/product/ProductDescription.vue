@@ -10,9 +10,9 @@
                 </div>
                 <div class="col-xs-10 col-sm-5 col-md-5 col-lg-4" v-if="!pending">
                     <h2>{{product.nom}}</h2>
-                    <span class="price half" v-if="product.tar50">{{product.tar50 | euro}} /50 grammes</span>
-                    <span class="price half" v-if="product.tar100">{{product.tar100 | euro}} /100 grammes</span>
-                    <span class="price" v-if="product.tarpce">{{product.tarpce | euro}} /unité</span>
+                    <span class="price half" v-if="product.tar50">{{product.tar50 | euro}} <span class="small">/ 50 gr</span></span>
+                    <span class="price half" v-if="product.tar100">{{product.tar100 | euro}} <span class="small">/ 100 gr</span></span>
+                    <span class="price" v-if="product.tarpce">{{product.tarpce | euro}} <span class="small">/ unité</span></span>
                     <p class="description">{{product.description}}</p>
                     <div class="settings">
                         <div class="half">

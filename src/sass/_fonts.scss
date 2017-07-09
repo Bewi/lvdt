@@ -6,6 +6,13 @@
 };
 
 @font-face {
+    font-family: "BrandonGrotesque Light";
+    src: url("../fonts/Brandon_light.otf"),
+        url("../fonts/brandon_light.woff") format('woff'),
+        url("../fonts/brandon_light.woff2") format('woff2');
+}
+
+@font-face {
     font-family: "BrandonGrotesque Regular";
     src: url("../fonts/Brandon_reg.otf"),
         url("../fonts/brandon_reg.woff") format('woff'),

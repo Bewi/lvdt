@@ -88,4 +88,25 @@
 
 		return $result;
 	}
+
+	function sql_Account($base, $login, $password, $guid) {
+		$req=$base->query('Call webnewconnexion("'.$login.'","'.$password.'", "'.$guid.'");');
+
+		$data=$req->fetch();
+
+    	$result = new class extends dumb {};
+		
+		$result->numClient = $data['NumClient'];
+		$result->numErreur = $data['NumErreur'];
+		$result->civilite = $data['Civilite'];
+		$result->nom = $data['Nom'];
+		$result->prenom = $data['Prenom'];
+		$result->niveauDeFidelite = $data['NiveauFidelite'];
+		$result->pourcentageDeReduction = $data['PourcReduction'];
+		$result->dateDeDerniereConnexion = $data['DateHeureLastConnexion'];
+
+		$req->closeCursor();
+
+		return $result;
+	}
 ?>

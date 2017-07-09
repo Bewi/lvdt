@@ -1,6 +1,6 @@
 <template>
     <header :class="{light: isLight}">
-        <hero :isLoggedIn='isLoggedIn' :hideAccountLink='hideAccountLink' :showLogin='showLogin'></hero>
+        <hero :isLoggedIn='isLoggedIn' :hideAccountLink='hideAccountLink' :showLogin='showLogin' :onLogout='onLogout'></hero>
         <search v-if='showSearch' :onSearch="onSearch"></search>
         <login v-if='!isLoggedIn' ref="login" :onLogin="onLogin"></login>
     </header>
@@ -26,22 +26,24 @@
                 }).then(response => {
                     if (response.status === 200) {
                         this.onLoggedIn();
+                        this.$root._router.push({ name: 'account' });
                     }
                 }, err => {
                     // TODO handle error
                     console.error(err);
                 });
             },
-            onLogOff() {
+            onLogout() {
                 this.$http.get('/server/logout.php')
                     .then(response => {
                         if (response.status === 200) {
-                            this.props.onLoggedOff();
+                            this.onLoggedOff();
+                            this.$root._router.push({ name: 'home' });
                         }
                     }, err => {
                         console.error(err);
                     });
-            }
+            },
         },
         components: {
             hero,
