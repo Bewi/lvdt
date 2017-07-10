@@ -16,7 +16,7 @@
 
         $account = sql_Account($bdd, $loginPassword[0], $loginPassword[1], session_id());
 
-        unset($bdd):
+        unset($bdd);
 
         if ($account->numErreur == 0) {
             $_SESSION['authenticated'] = true;  
