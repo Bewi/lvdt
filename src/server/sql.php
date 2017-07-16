@@ -109,4 +109,42 @@
 
 		return $result;
 	}
+
+	function sql_History($base, $customerNumber, $guid, $take, $page) {
+		$req = $base->query('Call WebEnteteHistoAchat('.$customerNumber.',"'.$guid.'",'.$take.','.$page.');');
+
+		$data=$req->fetch();
+
+		$result = new class extends dumb {};
+
+		$result->error = $data['NumErreur'];
+		$result->totalItems = $data['NbItemTotal'];
+		$result->saleId = $data['IdVente'];
+		$result->saleDate = $data['DateHeureVente'];
+		$result->total = $data['TotalTtc'];
+
+		$req->closeCursor();
+
+		return $result;
+	}
+
+	function sql_SaleDetail($base, $customerNumber, $guid, $saleId, $take, $page) {
+		$req = $base->query('Call WebDetailHistoAchat('.$customerNumber.',"'.$guid.'",'.$saleId.','.$take.','.$page.');');
+
+		$data=$req->fetch();
+
+		$result = new class extends dumb {};
+
+		$result->error = $data['NumErreur'];
+		$result->totalItems = $data['NbItemTotal'];
+		$result->saleId = $data['IdVente'];
+		$result->detailId = $data['IdDetail'];
+		$result->position = $data['NumLigne'];
+		$result->amount = $data['Qte'];
+		$result->packing = $data['Colisage'];
+		$result->label = $data['Article'];
+		$result->total = $data['TotalTtc'];
+
+		return $result;
+	}
 ?>

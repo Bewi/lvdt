@@ -21,7 +21,8 @@
         if ($account->numErreur == 0) {
             $_SESSION['authenticated'] = true;  
             $_SESSION['login'] = $loginPassword[0];
-            $_SESSION['account'] = json_encode($account, JSON_UNESCAPED_UNICODE, JSON_PRETTY_PRINT);;
+            $_SESSION['account'] = json_encode($account, JSON_UNESCAPED_UNICODE, JSON_PRETTY_PRINT);
+            $_SESSION['clientNumber'] = $account->numClient;
 
             header("HTTP/1.1 200 OK");
         } else if ($account->numErreur == 1) {
