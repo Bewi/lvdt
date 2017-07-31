@@ -21,7 +21,8 @@
         components: {SearchIcon},
         data () {
             return {
-                hasFocus: false
+                hasFocus: false,
+                searchFor: this.$route.query.search
             };
         },
         methods: {
