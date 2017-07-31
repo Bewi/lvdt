@@ -113,15 +113,19 @@
 	function sql_History($base, $customerNumber, $guid, $take, $page) {
 		$req = $base->query('Call WebEnteteHistoAchat('.$customerNumber.',"'.$guid.'",'.$take.','.$page.');');
 
-		$data=$req->fetch();
+		$data=$req->fetchAll();
 
-		$result = new class extends dumb {};
+		$result = array();
 
-		$result->error = $data['NumErreur'];
-		$result->totalItems = $data['NbItemTotal'];
-		$result->saleId = $data['IdVente'];
-		$result->saleDate = $data['DateHeureVente'];
-		$result->total = $data['TotalTtc'];
+		foreach ($data as $sale) {
+			$result[] = array(
+				"error" => intVal($sale['NumErreur']),
+				"totalItems" => intval($sale['NbItemTotal']),
+				"saleId" => intval($sale['IdVente']),
+				"saleDate" => $sale['DateHeureVente'],
+				"total" => $sale['TotalTtc'],
+			);
+		}
 
 		$req->closeCursor();
 
@@ -131,19 +135,25 @@
 	function sql_SaleDetail($base, $customerNumber, $guid, $saleId, $take, $page) {
 		$req = $base->query('Call WebDetailHistoAchat('.$customerNumber.',"'.$guid.'",'.$saleId.','.$take.','.$page.');');
 
-		$data=$req->fetch();
+		$data=$req->fetchAll();
 
-		$result = new class extends dumb {};
+		$result = array();
 
-		$result->error = $data['NumErreur'];
-		$result->totalItems = $data['NbItemTotal'];
-		$result->saleId = $data['IdVente'];
-		$result->detailId = $data['IdDetail'];
-		$result->position = $data['NumLigne'];
-		$result->amount = $data['Qte'];
-		$result->packing = $data['Colisage'];
-		$result->label = $data['Article'];
-		$result->total = $data['TotalTtc'];
+		foreach ($data as $saleDetail) {
+			$result[] = array(
+				"error" => $saleDetail['NumErreur'],
+				"totalItems" => $saleDetail['NbItemTotal'],
+				"saleId" => $saleDetail['IdVente'],
+				"detailId" => $saleDetail['IdDetail'],
+				"position" => $saleDetail['NumLigne'],
+				"amount" => $saleDetail['Qte'],
+				"packing" => $saleDetail['Colisage'],
+				"label" => $saleDetail['Article'],
+				"total" => $saleDetail['TotalTtc']
+			);
+		}
+
+		$req->closeCursor();
 
 		return $result;
 	}

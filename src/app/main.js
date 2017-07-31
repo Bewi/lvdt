@@ -6,6 +6,7 @@ import App from './App.vue';
 import routes from './routes.js';
 import emptyFilter from './filters/empty.filter.js';
 import euroFilter from './filters/euro.filter.js';
+import dateFilter from './filters/date.filter.js';
 
 const router = new VueRouter({
     routes

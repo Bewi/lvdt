@@ -1,7 +1,7 @@
 <template>
     <div>
         <perso :pending='persoPending' :account='account'></perso>
-        <history></history>
+        <history :history='history' :pending='historyPending'></history>
     </div>
 </template>
 <script>
@@ -45,7 +45,18 @@
                     });
             },
             getHistory () {
-
+                this.historyPending = true;
+                this.$http.get('/server/history.php')
+                    .then(response => {
+                        this.historyPending = false;
+                        if (response.status === 200) {
+                            this.history = response.body;
+                        } else {
+                            console.warn(response.status);
+                        }
+                    }).catch(error => {
+                        console.error(error);
+                    });
             }
         }
     };
