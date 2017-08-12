@@ -19,26 +19,6 @@ body {
             }
         }
 
-        #toggler {
-            display: none;
-            cursor: pointer;
-
-            h3 {
-                border-bottom: 1px solid #e5e5e5;
-                padding-bottom: 20px;
-                img {
-                    float: right;
-                    width: 20px;
-                }
-            }
-
-            &.toggled {
-                img {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-
         #nav-items {
             padding-bottom: 20px;
 
@@ -46,41 +26,69 @@ body {
                 overflow: hidden;
             }
 
-            ul {
+            .items-container {
                 text-transform: uppercase;
                 font-family: 'BrandonGrotesque Regular';
-                list-style: none;
                 padding-left: 0px;
                 margin-bottom: 0;
                 margin-top: 0;
                 color: #4b4b4b;
                 float: left;
+                width: 100%;
+
+                &.shorted {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    > div {
+                        width: 50%;
+    
+                        @for $i from 1 through 5 {
+                            &:nth-child(#{$i}) {
+                                order: $i + $i - 1;
+                            }
+                        }
+    
+                        @for $i from 1 through 5 {
+                            &:nth-child(#{$i + 5}) {
+                                order: $i * 2;
+                            }
+                        }
+                    }
+                }
             }
         }
 
         @media only screen and (max-width: 768px) {
             border-bottom: none;
 
-            #toggler {
-                display: block;
-            }
-
             h3 {
                 padding-top: 10px;
             }
 
             #nav-items {
-                height: 0px;
-                overflow: hidden;
-                transition: height 0.3s linear;
+                div.items-container {
+                    white-space: nowrap;
+                    overflow-x: scroll;
+                    -webkit-overflow-scrolling: touch;
+                    -ms-overflow-style: -ms-autohiding-scrollbar;
+                    display: inline-block;
 
-                &.show {
-                    height: 384px;
-                    border-bottom: 1px solid #e5e5e5;
-                }
+                    &.shorted {
+                        display: inline-block;
+                    }
 
-                ul.half {
-                    height: 75px;
+                    > div, &.shorted > div {
+                        display: inline-block;
+                        width: auto;
+                        padding: 12px 14px;
+                        border-radius: 5px;
+                        border: 1px solid #c3c3c3;
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+                    }
                 }
             }
         }

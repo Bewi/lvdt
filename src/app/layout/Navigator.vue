@@ -1,53 +1,44 @@
 <template>
     <div id="nav" :class="{ light: isLight }">
         <div class="container">
-            <div id="toggler" class="row" @click="toggle" :class="{ toggled: visible }">
-                <div class="col-xs-10">
-                    <h3>Découvrir les thés <img src="./images/arrow.svg" alt=""/></h3>
-                </div>
-            </div>
-            <div id="nav-items" class="row" :class="{ show: visible }">
+            <div id="nav-items" class="row">
                 <div class="col-xs-10 col-sm-5 col-md-4 col-lg-4">
                     <h3>Les thés d'origines</h3>
-                    <ul class="half">
-                        <li><navigator-item name='breakfast'/></li>
-                        <li><navigator-item name='ceylan' /></li>
-                        <li><navigator-item name='chine' /></li>
-                        <li><navigator-item name='inde' /></li>
-                        <li><navigator-item name='japon' /></li>
-                    </ul>
-                    <ul class="half">
-                        <li><navigator-item name='thés fumés' /></li>
-                        <li><navigator-item name='thés bio' /></li>
-                        <li><navigator-item name='autres pays' /></li>
-                    </ul>
+                    <div class="items-container shorted">
+                        <div><navigator-item name='breakfast'/></div>
+                        <div><navigator-item name='ceylan' /></div>
+                        <div><navigator-item name='chine' /></div>
+                        <div><navigator-item name='inde' /></div>
+                        <div><navigator-item name='japon' /></div>
+                        <div><navigator-item name='thés fumés' /></div>
+                        <div><navigator-item name='thés bio' /></div>
+                        <div><navigator-item name='autres pays' /></div>
+                    </div>
                 </div>
                 <div class="col-xs-10 col-sm-5 col-md-4 col-md-4 col-lg-4">
                     <h3>Les thés parfumés</h3>
-                    <ul class="half">
-                        <li><navigator-item name='mélanges parfumés' /></li>
-                        <li><navigator-item name='thés blancs' /></li>
-                        <li><navigator-item name='thés lights' /></li>
-                        <li><navigator-item name='thés noirs' /></li>
-                        <li><navigator-item name='thés verts' /></li>
-                    </ul>
-                    <ul class="half">
-                        <li><navigator-item name='thés oolongs' /></li>
-                        <li><navigator-item name='thés russes' /></li>
-                        <li><navigator-item name='earl grey' /></li>
-                        <li><navigator-item name='rooïbos' /></li>
-                        <li><navigator-item name='infusions' /></li>
-                    </ul>
+                    <div class="items-container shorted">
+                        <div><navigator-item name='mélanges parfumés' /></div>
+                        <div><navigator-item name='thés blancs' /></div>
+                        <div><navigator-item name='thés lights' /></div>
+                        <div><navigator-item name='thés noirs' /></div>
+                        <div><navigator-item name='thés verts' /></div>
+                        <div><navigator-item name='thés oolongs' /></div>
+                        <div><navigator-item name='thés russes' /></div>
+                        <div><navigator-item name='earl grey' /></div>
+                        <div><navigator-item name='rooïbos' /></div>
+                        <div><navigator-item name='infusions' /></div>
+                    </div>
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-2 col-md-2 col-lg-2">
                     <h3>Nos autres articles</h3>
-                    <ul>
-                        <li><navigator-item name='cafés' /></li>
-                        <li><navigator-item name='alimentaire' /></li>
-                        <li><navigator-item name='cristal' /></li>
-                        <li><navigator-item name='coffrets' /></li>
-                        <li><navigator-item name='accessoires' /></li>
-                    </ul>
+                    <div class="items-container">
+                        <div><navigator-item name='cafés' /></div>
+                        <div><navigator-item name='alimentaire' /></div>
+                        <div><navigator-item name='cristal' /></div>
+                        <div><navigator-item name='coffrets' /></div>
+                        <div><navigator-item name='accessoires' /></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,14 +51,6 @@
     export default {
         name: 'nav',
         props: ['isLight'],
-        data () {
-            return { visible: false }
-        },
-        methods: {
-            toggle () {
-                this.visible = !this.visible;
-            }
-        },
         components: {
             NavigatorItem
         }

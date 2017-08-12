@@ -4,7 +4,6 @@
     </li>
 </template>
 
-
 <script>
     export default {
         name: 'HistoryLine',
