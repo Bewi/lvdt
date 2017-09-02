@@ -11,7 +11,7 @@
     </div> 
 </template>
 
-<script>
+<script type="text/javascript">
     import CorporateHeader from './header/CorporateHeader.vue';
     import routes from './routes.js';
 

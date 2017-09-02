@@ -1,7 +1,7 @@
 <template>
     <div id="history">
         <div class="container">
-            <div class="row item">
+            <div class="row items">
                 <ul>
                     <history-line :key="sale.saleId" v-for="sale in history" :data="sale"></history-line>
                 </ul>

@@ -25,20 +25,54 @@ body {
     }
 
     #history {       
-        border-top: 1px solid #e5e5e5;
+        border-top: 1px solid $border-color;
         width: 100%;
         padding-top: 20px;
+
+        span, a {
+            font-family: BrandonGrotesque Regular;
+            font-size: 15px;
+            color: #303131
+        }
+
+        .items {
+            ul {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            li {
+                border-bottom: 1px solid $border-color;
+                list-style: none;
+                transition: all 0.3s;
+                font-size: 18px;
+                cursor: pointer;
+                &:hover {
+                    background-color: $border-color;
+                    border-bottom: 1px solid $light-grey;
+                } 
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    .head, .tail {
+                        width: 49%;
+                        display: inline-block;
+                    }
+
+                    .tail {
+                        text-align: right;
+                    }
+                }
+            }
+        }
 
         .item {
             h3 {
                 font-size: 15px;
                 margin-bottom: 5px;
-            }
-
-            span, a {
-                font-family: BrandonGrotesque Regular;
-                font-size: 15px;
-                color: #303131
             }
 
             > div {
