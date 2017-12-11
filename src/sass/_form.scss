@@ -1,5 +1,9 @@
 body {
     form {
+        p.invalid {
+            color: #fac0c1;
+        }
+        
         .input-group {
             label {
                 display: block;

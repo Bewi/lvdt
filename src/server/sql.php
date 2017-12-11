@@ -90,7 +90,8 @@
 	}
 
 	function sql_Account($base, $login, $password, $guid) {
-		$req=$base->query('Call webnewconnexion("'.$login.'","'.$password.'", "'.$guid.'");');
+		$passwordHash = sha1($password);
+		$req=$base->query('Call webnewconnexion("'.$login.'","'.$passwordHash.'", "'.$guid.'");');
 
 		$data=$req->fetch();
 
@@ -135,7 +136,7 @@
 	function sql_SaleDetail($base, $customerNumber, $guid, $saleId, $take, $page) {
 		$req = $base->query('Call WebDetailHistoAchat('.$customerNumber.',"'.$guid.'",'.$saleId.','.$take.','.$page.');');
 
-		$data=$req->fetchAll();
+		$data = $req->fetchAll();
 
 		$result = array();
 
@@ -154,6 +155,34 @@
 		}
 
 		$req->closeCursor();
+
+		return $result;
+	}
+
+	function sql_RequestPasswordChange($base, $requestId, $email) {
+		$req = $base->query('Call WebLostPasswordRequest("'.$requestId.'","'.$email.'");');
+		
+		$data = $req->fetch();
+
+		$result = new class extends dumb {};
+
+		$result->success = $data['NumErreur'] == 1 ? false : true;
+
+		return $result;
+	}
+
+	function sql_changePassword($base, $requestId, $email, $newPassword) {
+		$passwordHash = sha1($newPassword);
+		$req = $base->query('Call WebLostPasswordChange("'.$requestId.'","'.$email.'","'.$passwordHash.'");');
+
+		$result = new class extends dumb {};
+
+		if ($req === FALSE) {
+			$result-> success = false;
+		} else {
+			$data = $req->fetch();
+			$result-> success = $data['NumErreur'] == 1 ? false : true;
+		}
 
 		return $result;
 	}
