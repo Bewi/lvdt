@@ -1,0 +1,13 @@
+body {
+    #big-picture {
+        margin-top: 161px;
+
+        img {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 61px;
+        }
+    }
+}

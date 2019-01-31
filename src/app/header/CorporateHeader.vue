@@ -31,6 +31,7 @@
                 }, err => {
                     // TODO handle error
                     console.error(err);
+                    this.$refs.login.notifyWrongLogin();
                 });
             },
             onLogout() {

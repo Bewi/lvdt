@@ -19,13 +19,16 @@
                             <input id="email" type="text" :class="{ invalid: !validState.email}" v-model="email" />
                         </div>
                         <div class="input-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            <label for="password">password</label>
+                            <label for="password">Mot de passe</label>
                             <input id="password" type="password" :class="{ invalid: !validState.password}" v-model="password" />
                         </div>
                         <div class="input-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
                             <input type="submit" value="valider"/>
                         </div>
                     </form>
+                </div>
+                <div class="row" v-show="invalidLogin">
+                    <p class="error">Email ou mot de passe non valide</p>
                 </div>
             </div>
         </div>
@@ -40,6 +43,7 @@
         data () {
             return {
                 isVisible: false,
+                invalidLogin: false,
                 validState: {
                     email: true,
                     password: true
@@ -52,6 +56,11 @@
             },
             hide () {
                 this.isVisible = false;
+            },
+            notifyWrongLogin() {
+                this.invalidLogin = true;
+                this.$set(this.validState, 'email', false);
+                this.$set(this.validState, 'password', false);
             },
             login (email, password) {
                 let validState = {
@@ -75,7 +84,6 @@
                 if (!hasInvalidities) {
                     this.onLogin(email, password);
                 }
-                
             }   
         },
         props: ['onLogin']

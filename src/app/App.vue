@@ -25,7 +25,6 @@
             },
             onLoggedIn() {
                 this.isLoggedIn = isLoggedIn = true;
-                console.log(isLoggedIn);
             },
             onLoggedOff() {
                 this.isLoggedIn = isLoggedIn = false;

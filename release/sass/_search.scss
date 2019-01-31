@@ -1,0 +1,56 @@
+body {
+    #search {
+        height: 105px;
+        box-sizing: border-box;
+        padding: 29px 0;
+        input {
+            height: 46px;
+            border: none;
+            width: 90%;
+            font-size:40px;
+            font-family: 'FreightBigLight';
+            transition: color;
+            &:focus {
+                border: none;
+                outline: none;
+            }
+
+            @include placeholder {
+                transition: color 0.2s linear;
+            }
+
+            @include placeholder-focus {
+                color: #aeaeae;
+            }
+            
+            &[placeholder] { 
+                text-overflow: ellipsis;
+            }
+        }
+
+        svg {
+            height: 20px;
+            width: 20px;
+            float: right;
+            margin-top: 15px;
+            cursor: pointer;
+            path {
+                fill: $light-grey;
+                transition: fill 0.2s linear;
+            }
+            &.strong, &:hover {
+                path {
+                    fill: black;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            padding-bottom: 20px;
+            height: 80px;
+            input {
+                font-size: 25px;
+            }
+        }
+    }
+}

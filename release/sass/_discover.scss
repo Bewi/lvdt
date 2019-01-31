@@ -1,0 +1,68 @@
+#discover {
+    width: 100%;
+    border-top: 1px solid $border-color;
+    padding-top: 85px;
+
+    h1 {
+        margin-bottom: 70px;
+    }
+
+    a, a:hover, a:visited {
+        color: #333;
+    }
+
+    .item {
+        overflow: hidden;
+        cursor: pointer;
+       
+        .thumb {
+            width: 100%;
+        }
+
+        .item-details {
+            position: absolute;
+            bottom: -53px;
+            width: 100%;
+            background-image: linear-gradient(to bottom, rgba(247,177,166,0) 0%, rgba(255,255,255,1) 49%, rgba(255,255,255,1) 100%);
+            opacity: 0;
+            transition: bottom 1.3s cubic-bezier(.25,1.16,1,.95), opacity 1.3s cubic-bezier(.25,1.16,1,.95);
+
+            h3 {
+                text-align: center;
+            }
+
+            .details {
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: 'BrandonGrotesque Bold';
+                color: $grey;
+
+                padding: 0 0;
+                font-size: 11px;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $grey;
+                }
+
+                img {
+                    width: 20px;
+                    margin-left: 5px;
+                    margin-top: -4px;
+                }
+            }
+        }
+
+        &:hover {
+            .item-details {
+                bottom:0;
+                opacity: 1;
+            }
+        }
+    }
+
+    @media only screen and(max-width: 768px) {
+        display: none;
+    }
+}

@@ -1,0 +1,96 @@
+body {
+    #nav {
+        font-size: 11px;
+        padding-top: 52px;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        transition: padding-top 0.3s 0.3s linear;
+        &.light {
+            padding-top: 0px;
+        }
+
+        a {
+            color: $grey;
+            font-family: 'BrandonGrotesque Regular';
+            &:hover, &.active {
+                text-decoration: underline;
+                color: black;
+                font-family: 'BrandonGrotesque Bold'
+            }
+        }
+
+        #nav-items {
+            padding-bottom: 20px;
+
+            > div {
+                overflow: hidden;
+            }
+
+            .items-container {
+                text-transform: uppercase;
+                font-family: 'BrandonGrotesque Regular';
+                padding-left: 0px;
+                margin-bottom: 0;
+                margin-top: 0;
+                color: #4b4b4b;
+                float: left;
+                width: 100%;
+
+                &.shorted {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    > div {
+                        width: 50%;
+    
+                        @for $i from 1 through 5 {
+                            &:nth-child(#{$i}) {
+                                order: $i + $i - 1;
+                            }
+                        }
+    
+                        @for $i from 1 through 5 {
+                            &:nth-child(#{$i + 5}) {
+                                order: $i * 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            border-bottom: none;
+
+            h3 {
+                padding-top: 10px;
+            }
+
+            #nav-items {
+                div.items-container {
+                    white-space: nowrap;
+                    overflow-x: scroll;
+                    -webkit-overflow-scrolling: touch;
+                    -ms-overflow-style: -ms-autohiding-scrollbar;
+                    display: inline-block;
+
+                    &.shorted {
+                        display: inline-block;
+                    }
+
+                    > div, &.shorted > div {
+                        display: inline-block;
+                        width: auto;
+                        padding: 12px 14px;
+                        border-radius: 5px;
+                        border: 1px solid #c3c3c3;
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
