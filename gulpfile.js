@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserify = require('browserify');
 var babelify = require('babelify');
+var vueify = require('vueify');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -18,7 +19,8 @@ gulp.task('sassify', function() {
 });
 
 gulp.task('babelify', function() {
-    return browserify(['./src/app/app.jsx'])
+    return browserify(['./src/app/main.js'])
+        .transform(vueify)
         .transform(babelify)
         .bundle()
         .pipe(source('app.js'))
@@ -29,15 +31,12 @@ gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sassify']);
 });
 
-// gulp.task('babel:watch', function() {
-//     gulp.watch(['./src/**/*.jsx', './src/**/*.js', '!./src/applied/**/*.*'], ['babelify']);
-// });
+gulp.task('babel:watch', function() {
+    gulp.watch(['./src/**/*.vue', './src/**/*.js', '!./src/applied/**/*.*'], ['babelify']);
+});
 
-gulp.task('watch', ['sassify', 'sass:watch']);
+gulp.task('watch', ['sassify', 'sass:watch', 'babelify', 'babel:watch']);
 
-
-
-// EXPERIMENTAL
 gulp.task('phpify', function() {
     connect.server({
       hostname: 'localhost',
